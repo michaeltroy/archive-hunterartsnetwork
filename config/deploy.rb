@@ -28,7 +28,7 @@ set :rails_env,       "production"
 set :deploy_to, "/home/#{user}/#{application}"
 
 # =============================================================================
-# REPOSITORY
+# REPOSITORYy
 # =============================================================================
 set :scm, "git"
 set :deploy_via, :remote_cache 
