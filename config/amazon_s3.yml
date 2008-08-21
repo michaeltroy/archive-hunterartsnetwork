@@ -1,0 +1,14 @@
+production:
+  bucket_name: hunterArtsNetwork_artworks_production
+  access_key_id: 1SDS9JGYTAD8Q561GZR2
+  secret_access_key: x778REJhljF9hHVQTQS9NDtcBb9hbCy+sBfT2KxZ
+
+test:
+  bucket_name: appname_test
+  access_key_id: 
+  secret_access_key: 
+
+development:
+  bucket_name: hunterArtsNetwork_artworks_development
+  access_key_id: 1SDS9JGYTAD8Q561GZR2
+  secret_access_key: x778REJhljF9hHVQTQS9NDtcBb9hbCy+sBfT2KxZ

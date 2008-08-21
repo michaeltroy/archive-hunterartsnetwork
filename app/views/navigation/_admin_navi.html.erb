@@ -1,0 +1,4 @@
+<b><%= "#{@active.firstname} (admin)" %></b> |
+<%= link_to "Logout", :controller => "/sessions", :action => :destroy %> |
+<%= link_to 'Home', :controller => "/" %> |
+<%= link_to "Dashboard", :controller => "admin/dashboard", :action => 'index' %> 

@@ -1,0 +1,18 @@
+	
+  		<h1>Member Profile</h1>
+  	
+		<h2><span class="memberName">
+  			<%= @profile.username %></span>
+  			<span class="memberNumber">Member <%= @profile.number %></span></h2>
+  
+  		<div id="profileViews">	
+  			This profile has been viewed <b><%= @views.views %></b> times
+  		</div>
+  
+  		<div id="publicProfile"><%= markdown(@profile.profile) %></div>
+  
+  		<div id="publicGallery">
+  			<%= render :partial => "member/artworks/mini_gallery" %>
+  		</div>
+  
+

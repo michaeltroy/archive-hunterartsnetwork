@@ -1,0 +1,2 @@
+# Uncomment line below for deployment
+/home/mike/hunterartsnetwork.org/current/script/process/spawner -p 8000 -i 3

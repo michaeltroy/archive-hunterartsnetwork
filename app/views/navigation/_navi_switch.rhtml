@@ -1,0 +1,21 @@
+
+<!-- this code is the switch for what is displayed 
+	on both top and footer navigation -->
+	
+
+	<% if @active && @active.role == 'admin' %>
+	<%= render :partial => 'navigation/admin_navi' %> 
+
+	<% elsif @active && @active.role == 'member' %>
+	<%= render :partial => 'navigation/member_navi' %>
+
+	<% else %>
+		
+	<div id="headOneInnerLogin">
+	<%= link_to "Hey members, login here!", :controller => :sessions, :action => :login %></div> | 
+	<%= link_to 'Home',  :controller => :home %>
+	
+	<% end %>
+
+
+

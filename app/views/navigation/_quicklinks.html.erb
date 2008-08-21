@@ -1,0 +1,37 @@
+<div id="quicklinks">
+
+	<h1>Quicklinks</h1>
+	
+	<p><%= link_to "Home page", :controller => "/" %><br />
+	<%= link_to "Member directory", :controller => "/pages", 
+									:action => "member_directory" %></p>
+	<% if @active %>
+	<hr />
+	<p><%= link_to "My profile", :controller => "member/profile", 
+							  :action => "show", :id => @active %><br />
+	<%= link_to "My public profile", :controller => "/pages",
+									:action => "profile", :id => @active %></p>
+					
+	<br />					
+
+	<h3>Coming in the future!</h3>
+
+	<p>Please be patient as we take time to refine the site 
+	and many of it's features.
+	The following are features that will be added as time goes 
+	by and as more members use the site:</p>
+
+	<p> • Friends links<br />
+		• Artist advertising<br />
+		• Calendars<br />
+		• Member blogs<br />
+	</p>
+	
+	<p>Please feel free to offer suggestions for improvements and features.</p>
+	
+	<p><b>For help and support please email</b> 
+	<%= mail_to "support@hunterartsnetwork.org" %></p>
+
+	<% end %>
+	
+</div>

@@ -1,0 +1,55 @@
+	
+	<div id="errors">
+	<%= error_messages_for :member %>
+	</div>
+	
+	<!-- hidden fields -->
+	<%= hidden_field :member, :role, :value => 'member' %>
+	<%= hidden_field  :member, :medium, :value => "other" %>
+	<%= hidden_field :member, :password, :value => "#{@random}" %>
+	<!-- hidden fields -->
+	
+	<div id="hint">
+	<b>HINT</b> The username is the name that 
+	will be displayed in any public area.</div>
+	
+	<!-- system user details -->
+	<div id="section">			
+		<p class="subform">
+			<%= label(:member, :number, 'Number:', :class => "label") %>
+			<%= text_field :member, :number, :size => 10, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :email, "Email:", :class => "label") %>
+			<%= text_field :member, :email, :class => 'field' %></p>
+	 	<p class="subform">
+	 		<%= label(:member, :email_confirmation, "Confirm:", :class => "label") %>
+	 		<%= text_field :member, :email_confirmation, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :username, 'Username:', :class => 'label') %>
+			<%= text_field :member, :username, :class => 'field' %></p>
+	</div>
+	
+	<!-- Admin details -->
+	<div id="hint">
+	<b>HINT</b> The following details are for administration only and are kept private.</div>
+	<div id="section">
+		<p class="subform">
+			<%= label(:member, :firstname, 'Name:', :class => 'label') %>
+			<%= text_field :member, :firstname, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :surname, 'Surname:', :class => 'label') %>
+			<%= text_field :member, :surname, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :address, 'Address:', :class => 'label') %>
+			<%= text_field :member, :address, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :state, 'State:', :class => 'label') %>
+			<%= text_field :member, :state, :value => 'NSW',
+						   :size => 10, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :pcode, "Postcode", :class => 'label') %>
+			<%= text_field :member, :pcode, :size => 10, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:member, :phone, "Phone:", :class => 'label') %>
+			<%= text_field :member, :phone, :class => 'field' %></p>
+	</div>

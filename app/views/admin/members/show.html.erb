@@ -1,0 +1,10 @@
+	<h1>Show user</h1>	
+	<% form_tag :controller => "admin/members",
+				:action => 'update', :id => @member do %>
+	<!-- form -->
+	<%= render :partial => 'admin/members/form' %>
+
+	<div id="section">
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	<% end %>

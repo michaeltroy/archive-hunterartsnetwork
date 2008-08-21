@@ -1,0 +1,31 @@
+<head>  <%= stylesheet_link_tag 'global', 'home' %></head>
+
+<!-- Upcoming events -->	
+	<% @future.each do |event| %>
+	<div class="<%= cycle("odd", "even") %>">
+		
+		<div id="eventBoxWrapper">
+		<p class="eventBoxTitle">
+		<%= event.title %>
+		<span class="eventBoxCategory">
+		<%= event.category %>
+		</span>
+		</p>
+	
+		<% if event.artist? %>
+		<p class="eventBoxArtist"><%= event.artist %></p>
+		<% end %>
+	
+		<p class="eventBoxDetails">
+		<b><%= event.opendate.strftime("%a %d %B %y") %></b> |
+		<%= event.location.first(60) %>
+		</p>
+		
+		<span class="eventBoxLink">
+		<%= link_to "More information", 
+   					{:controller => "pages", :action => "event",
+   					:id => event}, :target => '_top'	 %>
+		</span>
+		</div>
+	</div>
+	<% end %>

@@ -1,0 +1,16 @@
+<div id="article">
+	
+	<h1>Event archive</h1>
+	
+	<div id="archive">
+	<p class="">
+	<% @articles.each do |article| %>
+	<%= article.title.capitalize %> |
+	<%= article.category %> |
+	<%= article.created_at.strftime("%a %d %b %y") %>
+	<%= link_to "view", :controller => "pages", 
+						:action => "article", :id => article %><br />
+	<% end %>
+	</div>
+	
+</div>

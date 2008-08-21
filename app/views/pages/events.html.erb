@@ -1,0 +1,31 @@
+<div id="eventArchive">
+	
+	<h1>Events</h1>
+	
+	<p><h2>Current events</h2>
+	<% if @current %>
+	<% @current.each do |current| %>	
+	<%= link_to "#{current.title}", :controller => "pages", :action => "event", :id => current %> 
+	<b><%= current.category %></b>
+	<%= current.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>
+	
+	<p><h2><span class="upcoming">
+		Upcoming events</span></h2>
+	<% if @future %>
+	<% @future.each do |future| %>
+	<%= link_to "#{future.title}", :controller => "pages", :action => "event", :id => future %> 
+	<b><%= future.category %></b>
+	<%= future.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>
+	
+	<p><h2><span class="past">
+		Past events</span></h2>
+	<% if @past %>
+	<% @past.each do |past| %>
+	<%= link_to "#{past.title}", :controller => "pages", :action => "event", :id => past %> 
+	<b><%= past.category %></b>
+	<%= past.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>
+	
+</div>

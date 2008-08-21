@@ -1,0 +1,42 @@
+<div id="dashboard">
+	
+	<div id="adminUserInfo">
+ 		Welcome back <%= @active.username.capitalize %> :)<br />
+	</div>
+	
+	<!-- general stats about system and user data -->
+	
+	<!-- accounts - top 5 accounts listed here -->
+	<div id="dashboardListSection">
+   		<h3>Members</h3>
+   		<h4>Top 5 most recently added members</h4>
+   		<%= render :partial => "admin/members/list" %>
+   		<p><%= link_to "Create new member",
+   					:controller => 'members', :action => 'new' %> |
+   		<%= link_to "Full list of members",
+   					:controller => 'members', :action => 'list' %></p>
+	</div>
+
+	<!-- events - top 5 events here -->
+	<div id="dashboardListSection">
+  		<h3>Events</h3> 
+  		<h4>Top 5 upcoming events</h4>
+  		<%= render :partial => "admin/events/list" %>
+  		<p><%= link_to "Publish new event",
+  					:controller => 'events', :action => 'new' %> |
+  		<%= link_to "Full list of events",
+  					:controller => 'events', :action => 'list' %>	</p>
+	</div>
+	
+	<!-- articles - top 5 articles here -->
+	<div id="dashboardListSection">
+  		<h3>Articles</h3>
+  		<h4>Top 5 most recently published articles</h4>
+  		<%= render :partial => "admin/articles/list" %>
+  		<p><%= link_to "Publish new article",
+  					:controller => 'articles', :action => 'new' %> |
+  		<%= link_to "Full list of articles",
+  					:controller => 'articles', :action => 'list' %></p>
+	</div>
+
+</div>

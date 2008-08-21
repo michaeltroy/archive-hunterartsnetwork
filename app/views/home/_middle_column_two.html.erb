@@ -1,0 +1,26 @@
+<div id="eventContainer">
+	<h1>Upcoming events</h1>
+	  
+	<iframe src="<%= url_for :controller => :home, :action => :upcoming %>"
+	  	class="iFrame" height="" frameborder="0">
+	</iframe>
+	   
+	<div id="archives">
+	  	<%= link_to "View all listed events", :controller => "pages", 
+	  				  :action => "events" %>			
+	</div>
+</div>
+
+
+<div id="eventContainer">	
+	<h1>News and articles</h1>
+	
+	<iframe src="<%= url_for :controller => :home, :action => :news_articles %>"
+	  	class="iFrame" height="" frameborder="0">
+	</iframe>
+	
+	<div id="archives">
+	<%= link_to "View Archives", :controller => "pages",
+	 							 :action => "articles"%>		
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div id="event">
+	
+	<h1>Event</h1>
+	<h2><%= @event.title %></h2>
+	<p class="dates">
+		<span class='details'>When:</span> 
+		<%= @event.opendate.strftime("%A %d %b %Y") %>
+
+	
+	<% if @event.closedate? %>
+		<span class="textbetween"> 	till </span>
+	<%= @event.closedate.strftime("%A %d %b %y") %></p>
+	<% end %>
+	
+	<p class="location">
+		<span class="details">Where:</span> 
+		<%= @event.location %>
+		<span class="textbetween"> at </span>
+	<%= @event.starttime.strftime("%I:%M%p") %></p>
+	<p class="copy"><%= markdown(@event.copy) %></p>
+	
+	<% if @event.link? %>
+	<p class="link">
+	<%= link_to "http://www.#{@event.link}", 
+				"http://www.#{@event.link}", :target => 'blank' %></p>
+	<% end %>
+
+</div>
+	
+	<p class="created">This event was listed on 
+	<%= @event.created_at.strftime("%A %d %b %Y") %>
+
+
+

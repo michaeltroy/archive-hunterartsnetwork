@@ -1,0 +1,12 @@
+<div id="article">
+
+	<h1>Article</h1>
+	<h2><%= "#{@article.title}" %></h2>
+	<p class="subtitle"><%= "#{@article.subtitle}" %></p>
+	<p class="copy"><%= markdown(@article.copy) %></p>
+
+</div>
+	
+	<p class="publishDate">
+	Article was published by <%= @article.member.username %>
+	on <%= @article.created_at.strftime("%A %d %b %Y") %> </p>

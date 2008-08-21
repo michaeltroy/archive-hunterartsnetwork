@@ -1,0 +1,129 @@
+	<h1>Member directory</h1>
+
+	<div id="directoryArtistCategory">
+		<h2>Artists</h2>
+	
+		<!-- Ceramics by order -->
+		<div id="directoryCategory">
+	 		<h3>Ceramicists</h3>
+	 		<% @ceramics.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+	 		<% end %>
+		</div>
+	
+		<!-- Jewellery by order -->
+		<div id="directoryCategory">
+	  		<h3>Jewellers</h3>
+	  		<% @jewellery.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />  	   
+		    <% end %>
+		</div>
+	
+		<!-- Mixed media by order -->
+		<div id="directoryCategory">
+	   		<h3>Mixed Media artists</h3>
+	   		<% @mixed_media.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />   	   
+			<% end %>
+		</div>
+	
+		<!-- Painting by order -->
+		<div id="directoryCategory">
+	   		<h3>Painters</h3>
+	   		<% @painting.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />   	   
+			<% end %>
+		</div>
+	
+		<!-- Textiles by order -->
+		<div id="directoryCategory">
+	  		<h3>Textile artists</h3>
+	  		<% @textiles.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+	  		<% end %>
+		</div>
+	
+		<!-- Works on paper by order -->
+		<div id="directoryCategory">
+	  		<h3>Works On Paper</h3>
+	  		<% @works_on_paper.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+	  		<% end %>
+		</div>
+		
+		<!-- Other by order -->
+		<div id="directoryCategory">
+	  		<h3>Other</h3>
+	  		<% @other.each do |member| %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+	  		<% end %>
+		</div>
+	</div>
+	
+	<!-- All other directory listings -->
+	<div id="directoryOtherCategories">		
+		<h2>Galleries</h2>
+	  	<p>
+		<% @other_member.each do |member| %>
+   			<% if member.category == "gallery" %>
+				<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+   			<% end %>
+		<% end %>
+		</p>
+		
+		<p><h2>Commercial</h2>
+	  	<% @other_member.each do |member| %>
+   			<% if member.category == "commercial" %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+   			<% end %>
+		<% end %>
+		</p>
+		
+		<p><h2>Organizations</h2>
+	  	<% @other_member.each do |member| %>
+   			<% if member.category == "organization" %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+   			<% end %>
+		<% end %>
+		</p>
+
+		<p><h2>Art Lovers</h2>
+	  	<% @other_member.each do |member| %>
+   			<% if member.category == "art lover" %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+   			<% end %>
+		<% end %>
+		</p>
+		
+		<p><h2>Collectors</h2>
+	  	<% @other_member.each do |member| %>
+   			<% if member.category == "collector" %>
+			<%= link_to "#{member.username}", 
+				:controller => "pages", 
+				:action => "profile", :id => member %><br />
+   			<% end %>
+		<% end %>
+		</p>
+	</div>

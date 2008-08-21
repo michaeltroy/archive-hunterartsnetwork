@@ -1,0 +1,50 @@
+	<div id="errors">
+	<%= error_messages_for :event %>
+	</div>
+
+	<!-- basic event details -->
+	<div id="section">			
+		<p class="subform">
+			<%= label(:event, :category, 'Category:', :class => "label") %>
+			<%= select :event, :category, options = [ 'Talk', 'Workshop',
+											 'Opening', 'Closing', 
+											 'Exhibition', 'Opportunity', 
+											 'Educational', 'General'] %></p>
+		<p class="subform">
+			<%= label(:event, :title, 'Title:', :class => "label") %>
+			<%= text_field :event, :title, :class => "field" %></p>
+		<p class="subform">
+			<%= hidden_field :event, :title, :value => "subtitle" %></p>
+		<p class="subform">
+			<%= label(:event, :artist, 'Artist(s):', :class => "label") %>
+			<%= text_field :event, :artist,  :class => "field", :include_blank => true %></p>
+		<p class="subform">
+			<%= label(:event, :location, 'Location:', :class => "label") %>
+			<%= text_field :event, :location, :class => "field" %></p>
+		<p class="subform">
+			<%= label(:event, :link, 'Link:', :class => "label") %>
+			<%= text_field :event, :link, :class => "field" %></p>
+		<p class="subform">
+			<%= hidden_field :event, :permalink, :value => "permalink" %></p>
+   </div>
+
+	<!-- event start dates and times -->
+	<div id="section">
+		<p class="subform">
+			<%= label(:event, :opendate, 'Open:', :class => "label") %>
+			<%= date_select :event, :opendate %></p>
+		<p class="subform">
+			<%= label(:event, :starttime, 'Time:', :class => "label") %>
+			<%= time_select :event, :starttime, :minute_step => 15 %></p>
+		<p class="subform">
+			<%= label(:event, :closedate, 'Close:', :class => "label") %>
+			<%= date_select :event, :closedate, :include_blank => true %></p>
+	</div>
+	
+	<!-- event end dates and time -->
+	<div id="section">
+		<p class="subform">
+			<%= text_area :event, :copy, :class => "field" %></p>
+	</div>
+	
+	

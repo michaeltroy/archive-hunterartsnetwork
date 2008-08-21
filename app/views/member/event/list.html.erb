@@ -1,0 +1,8 @@
+<h1>My events</h2>
+
+<%= render :partial => 'list' %>
+
+<p><%= link_to "List a new event",
+			:controller => :event, :action => 'new' %> |
+<%= link_to "Back to my profile",
+			:controller => 'member/profile', :action => :show %></p>

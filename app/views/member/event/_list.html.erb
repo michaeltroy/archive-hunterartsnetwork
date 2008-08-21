@@ -1,0 +1,33 @@
+
+
+
+<div id="dashboardList">
+<table class="dashboardTable", cellspacing="0">
+	<tr>
+	<th class="left">Title</th>
+	<th>Category</th>
+	<th>Location</th>
+	<th>Date</th>
+	<th></th>
+	</tr>
+	<tr>
+	<% @events.each do |event| %>
+		
+	<td class="left"><b><%= event.title.first(60) %> </b></td>
+	<td><%= event.category %></td>
+	<td><%= event.location %></td>
+	<td><%= event.opendate.strftime("%d %a %b %y") %>
+
+	<td class="right">
+		<%= link_to "Edit",    :controller => "member/event", 
+						       :action => "show", :id => event %> |
+		<%= link_to "Remove", {:controller => "member/event",
+							   :action => "destroy", :id => event},
+							  {:method => :post,
+							   :confirm => "Are you sure about this?"} %>
+		
+		</td>
+	</tr>
+	<% end %>
+</table>
+</div>

@@ -1,0 +1,32 @@
+<head><%= stylesheet_link_tag 'global', 'home' %></head>   	
+
+<% @current.each do |current| %>
+<div class="<%= cycle("odd", "even") %>">
+
+	<div id="eventBoxWrapper">
+
+	<p class="currentEventBoxTitle">
+	<%= current.title %>
+	<span class="currentEventBoxCategory">
+	<%= current.category %>
+	</span>
+	</p>
+	
+	<% if current.artist? %>
+	<p class="currentEventBoxArtist">
+	<%= current.artist %></p>
+	<% end %>
+	
+	<p class="eventBoxDetails">
+	Until <b><%= current.closedate.strftime("%a %d %B %y") %></b> | 
+	<%= current.location %> 
+	</p>
+		
+	<span class="eventBoxLink">
+	<%= link_to "More information", 
+				{:controller => "pages", :action => "event",
+				:id => current}, :target => '_top' %>
+	</span>
+	</div>
+</div>
+	<% end %>

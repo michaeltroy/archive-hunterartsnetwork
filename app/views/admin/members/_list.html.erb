@@ -1,0 +1,29 @@
+	
+	<div id="dashboardList">
+<table class="dashboardTable", cellspacing="0">
+	<tr>
+	<th class="left">Name</th><th>No</th>
+	<th>Email</th>
+	<th></th>
+	</tr>
+	<tr>
+		
+	<% @member.each do |member| %>
+	<td class="left"><b><%= member.firstname %> 
+						<%= member.surname %></b></td>
+	<td><%= member.number %></td>
+	<td><%= mail_to("#{member.email}") %></td>
+	<td class="right">
+		<%= link_to "Edit", :controller => "admin/members", 
+						    :action => "show", :id => member %> |
+		<%= link_to "Remove", {:controller => "admin/members",
+							   :action => "destroy", :id => member },
+							  {:method => :post,
+							   :confirm => "Are you sure about this?"} %>
+		
+		</td>
+	</tr>
+	<% end %>
+</table>
+</div>
+	

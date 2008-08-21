@@ -1,0 +1,28 @@
+	<div id="section">
+		<% form_tag :controller => "member/artworks",
+				:action => 'update', :id => @artwork do %>
+	
+	<div id="artworkEditForm">
+
+		<%= link_to image_tag(@artwork.public_filename(:thumb),
+							  :class => "artwork_thumb"), @artwork.public_filename %>
+	<div id="hint">
+	<b>HINT</b> These fields can be left blank.</div>
+		<p class="subform">
+			<%= label(:artwork, :title, 'Title:', :class => 'label') %>
+			<%= text_field :artwork, :title, :class => 'field' %></p>
+	
+		<p class="subform">
+			<%= label(:artwork, :dimensions, 'Dimensions:', :class => 'label') %>
+			<%= text_field :artwork, :dimensions, :class => 'field' %></p>
+    
+		<p class="subform">
+			<%= label(:artwork, :medium, 'Medium:', :class => 'label' ) %>
+			<%= select :artwork, :medium, options = [ '', 'Ceramics', 'Jewellery', 
+						'Mixed Media', 'Painting', 'Textiles', 
+					    'Works on Paper', 'Other'] %></p>
+	
+		<div id="submit"><%= submit_tag 'Update artwork'  %></div>	
+	<% end %>
+	</div>
+	</div>

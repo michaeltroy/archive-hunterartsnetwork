@@ -1,0 +1,30 @@
+    
+    <h2>Please sign in.</h2>
+	
+	<% form_tag :controller => :sessions, :action => :begin_session do %>
+	 
+	<dl><dt>Username</dt>
+       	 <dd><span class="field"><%= text_field_tag :username %></span></dd>
+       	 <dt>Password</dt>
+       	 <dd><span class="field"><%= password_field_tag :password %></span></dd>
+       	 <dd><span class="submit"><%= submit_tag "Sign in" %></span></dd>
+	<% end %>
+   	</dl>
+
+	<div id="links">
+		<%= link_to "Home", :controller => :home %> |
+		<%= link_to_function "Forgotten or lost password?", 
+							 "Element.toggle('lostPass')" %>
+	</div>
+	
+	<div id="lostPass" style='display:none;'>
+	<% form_tag :controller => :sessions, 
+				:action => :send_forgotten_password do %>
+		<p>Please enter your email address and your password 
+			will be sent to you shortly</p>
+
+			<%= text_field_tag :email %> 
+		<%= submit_tag "Send" %>
+	<% end %>
+		
+	</div>

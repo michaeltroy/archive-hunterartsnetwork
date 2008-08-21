@@ -1,0 +1,9 @@
+---
+port: '8000'
+cwd: /home/mike/hunterartsnetwork.org/current
+log_file: log/mongrel.log
+environment: production
+address: 127.0.0.1
+pid_file: tmp/pids/mongrel.pid
+servers: 3
+docroot: public

@@ -1,0 +1,12 @@
+load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+load 'config/deploy'
+
+# For dealing with stale Mongrel pid files
+#task :before_update, :roles => :app do
+#  run 'cd hunterartsnetwork.org/current && sudo mongrel_rails cluster::stop --clean'
+#  run 'cd hunterartsnetwork.org/current/tmp/pids && rm -rf mongrel*'
+#end
+
+#task :after_update, :roles => :app do
+#  run 'cd hunterartsnetwork.org/current && sudo mongrel_rails cluster::start'
+#end

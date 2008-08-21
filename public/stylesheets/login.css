@@ -1,0 +1,86 @@
+/* @override 
+
+	http://localhost:3000/stylesheets/login.css
+*/
+
+#login {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	width: 300px;
+	padding: 12px;
+	border-width: 4px;
+	border-style: solid;
+	background-color: #fff;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #254344;
+}
+
+h2 {
+	color: #3b1143;
+	font-size: 190%;
+}
+
+#login dt {
+	width: 100px;
+	display: inline;
+	float: left;
+	margin-bottom: 6px;
+	color: #787878;
+	font-size: 130%;
+}
+
+#login dd {
+	margin-left: 100px;
+	margin-bottom: 10px;
+	font-size: 110%;
+}
+
+#login input {
+	margin: 0;
+	font-size: .9em;
+}
+
+span.submit {
+	margin: 0;
+	padding: 0;
+}
+
+span.field {
+	background-color: #ff4d12;
+}
+
+p.error {
+	background-color: #ff4d12;
+	padding: 5px;
+	text-align: center;
+	font-size: .9em;
+	margin-bottom: 8px;
+	color: #fff;
+}
+
+p.flash {
+	color: #fff;
+	background-color: #64b838;
+	padding: 5px;
+	text-align: center;
+	font-size: .9em;
+	margin-bottom: 8px;
+}
+
+#lostPass {
+	background-color: #88fa97;
+	padding: 6px;
+	color: #557778;
+}
+
+#links {
+	background-color: #fdfc80;
+	padding: 4px;
+	font: 90% sans-serif;
+	margin-bottom: 8px;
+	text-align: center;
+}

@@ -1,0 +1,25 @@
+<head>  <%= stylesheet_link_tag 'global', 'home' %></head>
+
+	<% @articles.each do |article| %>
+	<div class="<%= cycle("odd", "even") %>">
+
+	<div id="articleBoxWrapper">
+	
+		<p class="articleBoxTitle">
+		<%= article.title %>
+		<span class="articleBoxCategory">
+		<%= article.category %>
+		</span>
+		</p>
+	
+		<p class="articleBoxDate">	
+		<%= link_to "Read article", {:controller => "pages",
+				:action => "article", :id => article}, :target => '_top' %> |
+		<%= article.created_at.strftime("%A %d %B %y") %>
+		</p>
+
+	</div>
+	</div>	
+	<% end %>
+	
+

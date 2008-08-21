@@ -1,0 +1,713 @@
+/* @override 
+	http://localhost:3000/stylesheets/page.css
+	http://www.hunterartsnetwork.org/stylesheets/page.css?1209611463
+*/
+
+/* ---------------------------------------
+general styling */
+
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	background-repeat: repeat-x;
+}
+
+p.flash {
+	background-color: #88fa97;
+	padding: 6px;
+	color: #4e8f91;
+	text-align: center;
+	margin-bottom: 16px;
+	font-size: 110%;
+}
+
+p.error {
+	background-color: #ff4d12;
+	color: #fbf34f;
+	text-align: center;
+	margin-bottom: 16px;
+	font-size: 110%;
+	padding: 6px;
+}
+
+#hint {
+	color: #a7a7a7;
+	font-size: 90%;
+	clear: both;
+	margin-bottom: 4px;
+}
+
+#hint b {
+	background-color: #fddeee;
+	color: #d83290;
+	clear: both;
+}
+
+span.hintAlert {
+	background-color: #f9fdb9;
+	color: #000;
+}
+
+p.description {
+	color: #a7a7a7;
+	margin-bottom: 4px;
+	font-size: 90%;
+	margin-left: 0;
+}
+
+.publicDetails {
+	
+}
+
+#pageMainFrame {
+	border-style: none;
+	min-width: 700px;
+	color: #2d3235;
+	line-height: 16px;
+	width: 936px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-top: 24px;
+}
+
+
+/* ---------------------------------------
+back navi */
+
+#backNavi {
+	background-color: #e7906d;
+	padding: 4px;
+	margin-bottom: 8px;
+}
+
+.page {
+	color: #ff4d12;
+}
+
+/* ---------------------------------------
+forms styling */
+
+textarea {
+	padding-top: 6px;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	padding: 8px;
+	width: 96%;
+	color: #363d41;
+	font: 110% Helvetica, Arial, sans-serif;
+}
+
+.label {
+	font-size: 110%;
+	text-align: left;
+	width: 86px;
+	float: left;
+	padding-top: 4px;
+	color: #5e5e5e;
+}
+
+.label2 {
+	color: #5e5e5e;
+	font-size: 110%;
+	text-align: left;
+	padding-top: 4px;
+	margin-right: 8px;
+}
+
+.label3 {
+	color: #5e5e5e;
+	font-size: 110%;
+	text-align: left;
+	padding-top: 4px;
+	margin-right: 8px;
+	padding-left: 30px;
+}
+
+.field {
+	color: #787878;
+	font-size: 100%;
+	margin-bottom: 6px;
+}
+
+select {
+}
+
+#section {
+	background-color: #f5f5f5;
+	padding: 8px;
+	margin-bottom: 12px;
+	clear: both;
+}
+
+#userSection {
+	background-color: #d0f2f5;
+	padding: 8px;
+	margin-bottom: 12px;
+}
+
+#changePassSection {
+	background-color: #faebf9;
+	padding: 8px;
+	margin-bottom: 12px;
+}
+
+input#user_username {
+	color: #9e9a6d;
+	background-color: #f8fdcb;
+}
+
+input#user_password {
+	color: #9e9a6d;
+	background-color: #f8fdcb;
+}
+
+#generalForm {
+	padding: 10px;
+	border: 1px solid #dcd9d4;
+}
+
+#submit {
+	padding: 8px;
+	margin-top: 8px;
+	border-top: 1px solid #eaeaea;
+	background-color: #f0f0f0;
+	clear: both;
+}
+
+#userSubmit {
+	padding: 8px;
+	margin-top: 8px;
+	border-top: 1px solid #c4e3e8;
+	background-color: #c9e9ee;
+	clear: both;
+}
+
+#changePassSubmit {
+	padding: 8px;
+	margin-top: 8px;
+	border-top: 1px solid #f0deeb;
+	background-color: #f5e5f0;
+	clear: both;
+}
+
+p.subform {
+	margin: 4px;
+}
+
+p.formHeading {
+	font-size: 120%;
+	clear: both;
+	color: #5e5e5e;
+	font-weight: bold;
+}
+
+/* ---------------------------------------
+page left */
+
+#pageLeft {
+	width: 604px;
+	min-height: 440px;
+	margin-right: 20px;
+	padding-bottom: 24px;
+	float: left;
+}
+
+#pageLeftTop {
+	height: 20px;
+	background-repeat: no-repeat;
+}
+
+#pageLeftContent {
+	margin: 0;
+	padding: 0 12px 1px;
+}
+
+#pageLeftBottom {
+	height: 26px;
+	background-repeat: no-repeat;
+}
+
+#pageLeft a:link {
+}
+
+#pageLeft a:visited {
+}
+
+#pageLeft a:hover {
+}
+
+/* ---------------------------------------
+page right */
+
+#pageRight {
+	width: 308px;
+	padding-bottom: 24px;
+	float: right;
+}
+
+#innerRight {
+	color: #444;
+}
+
+#innerRight p {
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+
+#innerRight h1 {
+	margin-bottom: 12px;
+	margin-top: 0;
+}
+
+#innerRight h2 {
+	color: #254344;
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+
+#innerRight h3 {
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+
+#innerRight h4 {
+	font-weight: bold;
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+
+#innerRight a:link {
+	margin-top: 0;
+	margin-bottom: 6px;
+}
+
+#innerRight a:visited {
+	margin-top: 0;
+	margin-bottom: 6px;
+}
+
+#innerRight a:hover {
+	margin-top: 0;
+	margin-bottom: 6px;
+}
+
+/* ---------------------------------------
+member directory */
+
+#directoryCategory {
+	margin-bottom: 12px;
+}
+
+#directoryCategory h3 {
+	margin-bottom: 2px;
+	color: #557778;
+}
+
+#directoryArtistCategory {
+	float: left;
+	width: 260px;
+	padding-top: 12px;
+	margin-right: 48px;
+}
+
+#directoryOtherCategories {
+	width: 260px;
+	float: left;
+	padding-top: 12px;
+}
+
+#directoryOtherCategories p {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+/* ---------------------------------------
+public profile */
+
+#profileViews {
+	padding: 2px;
+	color: #e47d78;
+	border: 1px solid #f9fdb9;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 8px;
+	background-color: #f9fdb9;
+}
+#publicGallery {
+}
+
+#publicProfile {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	color: #444;
+	float: left;
+}
+
+#publicProfile h1 {
+	margin-bottom: 8px;
+	font-size: 160%;
+}
+
+#publicProfile h2 {
+	font-size: 140%;
+}
+
+#publicProfile h3 {
+	font-size: 110%;
+	font-weight: bold;
+	margin-bottom: 8px;
+	border-bottom: 2px solid #a7a7a7;
+	padding-bottom: 4px;
+}
+
+#publicProfile p {
+	margin-bottom: 8px;
+	clear: left;
+}
+
+#publicProfile ul {
+	width: 360px;
+}
+
+#publicProfile li {
+	display: list-item;
+}
+
+#publicProfile blockquote p {
+	color: #787878;
+	font: italic 110% Georgia, "Times New Roman", Times, serif;
+}
+/* ---------------------------------------
+ quicklinks */
+ #quicklinks {
+	padding: 12px;
+		border: 2px solid #f9fdb9;
+
+	background-color: #f8fdcb;
+	margin-bottom: 12px;
+}
+
+/* ---------------------------------------
+ markdown */
+ #markdown {
+	padding: 12px;
+	border: 2px solid #e6e7ca;
+	background-color: #ebeace;
+}
+
+#markdown p.markdownExample {
+	font-weight: bold;
+}
+
+#markdown p {
+}
+
+/* ---------------------------------------
+ the dashboard */
+
+#adminUserInfo {
+	padding: 8px;
+	margin-bottom: 8px;
+	color: #262626;
+	background-color: #fbeff3;
+}
+
+#dashboard {
+}
+
+#dashboard p a:link {
+}
+
+#dashboard p a:visited {
+}
+
+#dashboard p a:hover {
+}
+
+#dashboard h3 {
+	color: #444;
+	padding-top: 4px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+#dashboard h4 {
+	color: #444;
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+/* -------- dashboard table */
+
+#dashboardList {
+	background-color: #f9f9f9;
+	margin-bottom: 6px;
+}
+
+#dashboardListSection {
+	margin-bottom: 12px;
+}
+
+#dashboardList table.dashboardTable {
+	width: 100%;
+	text-align: left;
+	font-size: 94%;
+}
+
+#dashboardList a:link {
+}
+
+#dashboardList table.dashboardTable th.left {
+	text-align: left;
+}
+
+#dashboardList table.dashboardTable td.left {
+	text-align: left;
+}
+
+#dashboardList table.dashboardTable th.right {
+	text-align: right;
+	color: #d4d4d4;
+	border-right-style: none;
+	width: 83px;
+}
+
+#dashboardList table.dashboardTable td.right {
+	text-align: right;
+	color: #d4d4d4;
+	border-right-style: none;
+	width: 83px;
+}
+
+#dashboardList table.dashboardTable tbody tr td {
+	padding-top: 2px;
+	padding-left: 4px;
+	padding-bottom: 2px;
+}
+
+#dashboardList table.dashboardTable tbody tr th {
+	background: #f0f5f5 url(../images/table-th-graphic.gif) repeat-x;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding: 5px;
+	border-bottom: 1px solid #e9e9e9;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#dashboardList table.dashboardTable tbody tr td {
+	color: #262626;
+	border-right: 1px solid #f0f5f5;
+	border-bottom: 1px solid #f1f1f1;
+	text-shadow: #000000 0 0 0;
+	padding: 3px 5px;
+}
+
+/* -------- stats */
+
+#stats {
+	padding: 8px;
+	background-color: #f9fdb9;
+	margin-bottom: 8px;
+	display: none;
+}
+
+#stats p {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #603b12;
+}
+
+#stats h3 {
+	color: #4f310f;
+	margin-bottom: 4px;
+}
+
+
+/* ---------------------------------------
+profile */
+
+.memberNumber {
+	color: #ff4d12;
+	font-size: 100%;
+}
+
+.memberName {
+	color: #00789f;
+	font-size: 100%;
+}
+
+#profile {
+}
+
+#profile .heading {
+	color: #603b12;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+/* ---------------------------------------
+mini gallery */
+
+#miniGallery {
+}
+
+#miniGallery a:link {
+}
+
+#miniGallery a:visited {
+}
+
+#artworkSmallText a:link {
+}
+
+.artworkButton {
+	border-style: none;
+}
+
+#artworkThumb {
+	margin-right: 4px;
+	width: 134px;
+	float: left;
+	margin-bottom: 8px;
+}
+
+.artwork_thumb {
+	width: 130px;
+	border-style: none;
+	margin-right: 6px;
+	margin-bottom: 3px;
+}
+
+#artworkText {
+	font-size: 86%;
+	color: #556066;
+	height: 66px;
+}
+
+#artworkEditForm {
+}
+
+#artworkEditForm img {
+	padding-bottom: 12px;
+}
+
+#upload {
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+/* ---------------------------------------
+article */
+
+#article {
+}
+
+#article p {
+	font-size: 108%;
+	line-height: 16px;
+	padding-bottom: 1px;
+}
+
+#article h2 {
+	color: #86a7a7;
+	font-size: 180%;
+	font-weight: bold;
+}
+
+#article .subtitle {
+		background-color: #fff;
+	color: #919191;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+/* ---------------------------------------
+event */
+
+#eventArchive {
+	
+}
+
+#eventArchive h2 {
+	color: #ff4d12;
+	font-weight: bold;
+}
+
+span.upcoming {
+	color: #de338e;
+}
+
+span.past {
+	color: #df41fa;
+}
+
+#eventArchive p {
+	margin-bottom: 10px;
+}
+
+#event {
+}
+
+#event p {
+	font-size: 108%;
+	line-height: 16px;
+	padding-bottom: 1px;
+}
+
+#event h2 {
+	color: #ff4d12;
+	font-size: 180%;
+	font-weight: bold;
+}
+
+#event .details {
+	color: #787878;
+	display: block;
+	float: left;
+	width: 52px;
+}
+
+#event .dates, .location {
+	font-size: 110%;
+	margin-bottom: 2px;
+}
+
+#event .dates {
+	color: #000;
+	font-weight: bold;
+}
+
+#event .location {
+	color: #000;
+	font-weight: bold;
+}
+
+#event .textbetween {
+	color: #787878;
+}
+
+
+#event .copy {
+}
+
+#event .link {
+	
+}
+
+#event .detail {
+	
+}
+
+/* ---------------------------------------
+styling for article and event */
+
+.created, .publishDate {
+	color: #a7a7a7;
+	font-size: 100%;
+}
+
+.publishDate {
+	
+}

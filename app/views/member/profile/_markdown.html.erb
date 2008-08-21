@@ -1,0 +1,24 @@
+<% if @active && @profile == @active %>
+
+	<div id="markdown">
+		<div id="markdownFormatExample">
+		<h1>Formatting</h1>
+		<p>Your profile area uses a special text formatting (markup) language
+			known as Markdown. Following are some basic formatting options
+			you can use in your profile area.</p>
+		
+		<p class="markdownExample">#Level one heading<br />
+		##Level two heading<br />
+		###Level three heading<br />
+		**Bold type**<br />
+		>Blockquote<br />
+		[Link text](http://www.link.com)
+		</p>
+			
+		<p>For further information and extra formatting reference, please visit
+			<%= link_to "Mardown markup language", 
+			"http://daringfireball.net/projects/markdown/" %></p>		
+		</div>
+	</div>
+
+<% end %>

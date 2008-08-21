@@ -1,0 +1,61 @@
+SessionExpiration
+=================
+
+::: Overview
+
+ActsAsViewable is plugin that allows you to track page and asset views.
+
+::: Usage
+
+Install the plugin:
+
+script/plugin install http://svn.intridea.com/svn/public/acts_as_viewable
+
+OR
+
+cd vendor/plugins
+svn co http://svn.intridea.com/svn/public/acts_as_viewable
+
+Create the tables where views will be tracked:
+
+class CreateViewings < ActiveRecord::Migration
+  def self.up
+    create_table :viewings do |t|
+      t.column :viewable_type,  :string
+      t.column :viewable_id,    :integer
+      t.column :views,          :integer,   :default => 0
+      t.column :created_at,     :datetime, :null => false
+      t.column :updated_at,     :datetime
+    end
+  end
+
+  def self.down
+    drop_table :viewings
+  end
+end
+
+Set the objects you want to track views for:
+
+class SomeAsset < ActiveRecord::Base
+  acts_as_viewable
+end
+
+Now you can increment views for these objects wherever you need to. For example in the show action of our SomeAssetController:
+
+class SomeAssetController < ApplicationController
+  def show
+    @some_asset = SomeAsset.find(params[:id])
+    @some_asset.increment_views
+  end
+end
+
+To get the number of views:
+
+@some_asset.views
+
+::: Contact
+
+Dave Naffis <dave@intridea.com>
+
+Intridea: http://www.intridea.com
+Intridea Open Source Projects: http://trac.intridea.com/trac/public

@@ -1,0 +1,31 @@
+
+	<% for art in @profile.artworks do %>	
+	<div id="artworkThumb">
+   		<%= link_to image_tag(art.public_filename(:thumb),
+   					:class => "artwork_thumb"), art.public_filename,
+ 					options = {:target => "parent" }%>
+
+         
+	<div id="artworkText">
+	<% if art.title? %>
+   		 <b>Title:</b> <%= art.title.first(40) %><br />
+	<% end %>
+	 
+	<% if art.medium? %>
+   		 <b>Medium:</b> <%= art.medium %><br />
+    <% end %>
+	 
+	<% if art.dimensions? %>
+   		 <b>Size:</b> <%= art.dimensions.first(40) %><br/>
+	<% end %>
+
+		<% if @active && @profile.id == @active.id %>
+   		 <%= link_to "Edit", :controller => "member/artworks", 
+   		 					:action => "show", :id => art %> |
+		 <%= link_to "Remove", :controller => "member/artworks",
+		 					:action => "destroy", :id => art %>
+	   	<% end %>
+	</div>								
+	</div>
+	<% end %>
+

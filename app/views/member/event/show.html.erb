@@ -1,0 +1,11 @@
+	<h1>Show event</h1>
+	
+	<% form_tag :controller => "member/event",
+				:action => 'update', :id => @event do %>
+	<!-- form -->
+	<%= render :partial => 'member/event/form' %>
+
+	<div id="section">
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	<% end %>

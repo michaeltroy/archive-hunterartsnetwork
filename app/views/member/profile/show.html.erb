@@ -1,0 +1,146 @@
+	
+	<h1>Your profile page</h1>
+	<h1><span class="memberName">
+		<%= @profile.username %></span>
+		<span class="memberNumber">No:<%= @profile.number %></span></h1>
+	<h2>Member account name (<%= @profile.firstname %> <%= @profile.surname %>)</h2>
+	
+	<%= error_messages_for :profile %>
+	
+	<!-- User details -->
+	<% form_tag :controller => "member/profile",
+				:action => 'update', :id => @profile do %>
+	<p class="formHeading">User details</p>
+	<div id="hint">
+	<b>HINT</b> Your username is the name that 
+	will be displayed in any public area. <br />
+	Updated user details will be emailed to you automatically.</div>
+	
+	<!-- system user details -->
+	<div id="userSection">
+		<p class="subform">
+			<%= label(:profile, :email, "Email:", :class => "label") %>
+			<%= text_field :profile, :email, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:profile, :username, 'Username:', :class => 'label') %>
+			<%= text_field :profile, :username, :class => 'field' %></p>
+		<div id="userSubmit"><%= submit_tag "Change user details" %> or
+			<%= link_to_function "Change password", 
+							     "Element.toggle('changePassSection')" %>
+		</div>
+	</div>
+	<% end %>
+	
+	<!-- change password area -->
+	<% form_tag :controller => "member/profile",
+				:action => 'update_password', :id => @profile do %>
+	<div id="changePassSection" style="display:none;">
+		<p class="subform">
+			<%= label(:profile, :password, 'Password:', :class => 'label') %>
+			<%= password_field :profile, :password, :class => 'field' %></p>
+		<div id="changePassSubmit"><%= submit_tag "Change password" %></div>
+	</div>
+	<% end %>
+	
+	<!-- general profile update -->
+	<% form_tag :controller => "member/profile",
+				:action => 'update', :id => @profile do %>
+				
+	<p class="formHeading">Preferences</p>
+	<div id="hint">
+	<b>HINT</b> Check the box to make your profile public 
+	(listed in the member directory).
+	</div>
+	<div id="section">
+		<p class="subform">
+		<%= label(:profile, :public, 'Public?', :class => 'label2') %>
+		<%= check_box :profile, :public %>
+		<%= label(:profile, :category, 'Category', :class => 'label3') %>
+		<%= select :profile, :category, options = ['artist', 'gallery', 
+												   'commercial', 'organization',
+												   'art lover', 'collector'] %>
+		</p>
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	
+	<!-- Admin details -->
+	<p class="formHeading">Administration details</p>
+	<div id="hint">
+	<b>HINT</b> The following details are for administration purposes only.</div>
+	<div id="section">
+		<p class="subform">
+			<%= label(:profile, :address, 'Address:', :class => 'label') %>
+			<%= text_field :profile, :address, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:profile, :state, 'State:', :class => 'label') %>
+			<%= text_field :profile, :state, :value => 'NSW',
+						   :size => 10, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:profile, :pcode, "Postcode:", :class => 'label') %>
+			<%= text_field :profile, :pcode, :size => 10, :class => 'field' %></p>
+		<p class="subform">
+			<%= label(:profile, :phone, "Phone:", :class => 'label') %>
+			<%= text_field :profile, :phone, :class => 'field' %></p>
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	
+	<!-- events -->
+   	<p class="formHeading">Events listing</p>
+   	<div id="hint">
+   	<b>HINT</b> List your exhibition details. 
+	<br /><span class="hintAlert">Please check the
+		<%= link_to "events listing page", :controller => "/pages", :action => :events %> 
+		first, to see if your event has already been listed</span></div>	
+   	<div id="section">
+   		<% if @events %>
+   		<%= render :partial => "member/event/list" %>
+   		<% end %>
+   		<%= link_to 'List new event', :controller => :event, :action => :new %> |
+		<%= link_to 'View all events', :controller => :event, :action => :list %>
+	</div>
+
+	
+	<!-- profile area -->
+	<p class="formHeading">Writeup</p>
+	<div id="hint">
+	<b>HINT</b> Write about your work, organization, gallery or yourself.</div>
+	
+	<% if @profile.category == 'artist' %>
+	<div id="section">
+		<p class="subform">
+			<%= label(:profile, :medium, "Medium:", :class => 'label') %>
+			<%= select :profile, :medium, options = [ 'ceramics', 'jewellery', 
+								'mixed media', 'painting', 'textiles', 
+				   				'works on paper', 'other'] %></p>
+			<p class="description">This is your primary work medium.</p>
+	</div>
+	<% end %>
+	
+	<div id="section">
+		<p class="subform">
+			<%= text_area :profile, :profile %></p>
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	<% end %>
+	
+	<!-- Mini gallery code below here -->		
+	<p class="formHeading">Your artwork gallery</p>
+		
+	<div id="hint"><b>HINT</b> Please try and make your 
+	images proportional before uploading. All thumbnails of images will 
+	be stretched to fit 133x133 pixels. Images need to be proportional to 
+	be displayed on the home page. All images are selected by random for 
+	home page display.</div>
+	
+	<div id="section">
+		<div id="miniGallery">
+		<%= render :partial => "member/artworks/mini_gallery" %>
+		
+		<div id="submit">
+		<%= button_to ("Upload artwork"), 
+		:controller => 'member/artworks', :action => 'upload' %>
+		</div>
+
+		</div>
+	</div>
+	

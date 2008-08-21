@@ -1,0 +1,21 @@
+	<div id="errors">
+	<%= error_messages_for :article %>
+	</div>
+	
+	<div id="section">
+		<p class="subform">
+			<%= label(:article, :category, 'Category:', :class => "label") %>
+			<%= select :article, :category, options = ['public', 'members']%></p>
+		<p class="subform">
+			<%= label(:article, :title, 'Title:', :class => "label") %>
+			<%= text_field :article, :title, :class => "field" %></p>
+		<p class="subform">
+			<%= label(:article, :subtitle, 'Subtitle:', :class => "label") %>
+			<%= text_field :article, :subtitle, :class => "field" %></p>
+	</div>
+	
+	<div id="section">
+		<p class="subform">
+			<%= text_area :article, :copy %></p>		
+	</div>
+			

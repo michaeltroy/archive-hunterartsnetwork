@@ -1,0 +1,30 @@
+
+<div id="dashboardList">
+<table class="dashboardTable", cellspacing="0">
+	<tr>
+	<th class="left">Title</th>
+	<th>Subtitle</th>
+	<th>Category</th>
+	<th>Created</th>
+	<th></th>
+	</tr>
+	<tr>
+	<% @articles.each do |article| %>
+		
+	<td class="left"><b><%= article.title.first(20).capitalize %>... </b></td>
+	<td><%= article.subtitle.first(20).capitalize %>...</td>
+	<td><%= article.category.capitalize %></td>
+	<td><%= article.created_at.strftime("%d %a %b %y") %></td>
+	<td class="right">
+		<%= link_to "Edit",    :controller => "admin/articles", 
+						       :action => "show", :id => article %> | 
+		<%= link_to "Remove", {:controller => "admin/articles",
+							   :action => "destroy", :id => article},
+							  {:method => :post,
+							   :confirm => "Are you sure about this?"} %>
+		
+		</td>
+	</tr>
+	<% end %>
+</table>
+</div>

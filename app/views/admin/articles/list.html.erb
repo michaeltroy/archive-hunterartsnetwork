@@ -1,0 +1,11 @@
+<div id="backNavi">
+<%= link_to 'Dashboard >', :controller => 'admin/dashboard' %>
+<span class="page">Articles > </span>Listing of all articless</div>
+
+
+<%= render :partial => 'list' %>
+
+<p><%= link_to "Write new article",
+			:controller => 'articles', :action => 'new' %> |
+<%= link_to "Back to the dashboard",
+			:controller => 'admin/dashboard', :action => 'index' %></p>

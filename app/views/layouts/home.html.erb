@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="Newcastle and Hunter area arts network.
+The Hunter Arts Network is dedicated to the professional 
+development of Hunter and Newcastle based artists">
+	<meta name="keywords" content="design, art, arts, craft, ceramics, painting, events, whats on, profile, artist, mixed media, galleries, textile, paper, works, exhibitions, bazaar"/>
+  <title>Hunter Arts Network | Newcastle Arts | Crafts | Art Bazaar | Artist Insurance | Artist Directory</title>
+  <%= stylesheet_link_tag 'global', 'home' %>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+<body>
+	
+	<div id="homeMainFrame">
+		
+	<div id="headOne">
+		<div id="headOneInner">
+		<div id="quickNavi">
+			<%= render :partial => 'navigation/navi_switch' %>
+		</div>
+		</div>
+	</div>
+	
+<!-- header with all details and logo etc -->	
+  		<div id="headTwo">
+			<div id="headTwoInner">
+			</div>
+  		</div>
+
+		<%= render :partial => "alerts/home_alert_one" %>
+
+		<div id="mainMenu">
+			<div id="mainMenuInner">
+			<%= render :partial => "navigation/main_menu" %>
+			</div>
+		</div>
+  	
+  	<!-- middle area -->	
+	<div id="middle">
+	<div id="middleInner">
+				
+		<div id="middleColumnOne">
+  			<%= render :partial => 'home/middle_column_one' %>
+  		</div>
+			  
+		<div id="middleColumnTwo">
+			<%= render :partial => 'home/middle_column_two' %>
+  		</div>
+			  
+		<div id="middleColumnThree">
+			<%= render :partial => 'home/middle_column_three' %>
+  		</div>
+	</div>
+  	</div>
+
+	<div id="disclaimer"> 
+		The Hunter Arts Network accepts no responsibility for any inaccuracies.
+		<b>Please ALWAYS confirm details with the venue or organizer.</b>
+	</div>
+	
+	<!-- start foot area's one and two -->
+	<div id="footOne">
+		<div id="footOneInner">
+			<div id="footOneColumnOne">
+				<%= render :partial => 'home/foot_one_column_one' %>
+			</div>
+			<div id="footOneColumnTwo">
+				<%= render :partial => 'home/foot_one_column_two' %>
+			</div>
+			<div id="footOneColumnThree">
+				<%= render :partial => 'home/foot_one_column_three' %>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="footTwo">
+		<div id="footTwoInner">
+	<%= render :partial => "navigation/foot_two_info" %>		
+		</div>
+	</div>
+
+<!-- Google Anaylitics -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-933746-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+
+</body>
+</html>

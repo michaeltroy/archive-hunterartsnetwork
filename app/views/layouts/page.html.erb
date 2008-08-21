@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>HunterArts | <%= controller.action_name %></title>
+  <%= javascript_include_tag :defaults %> 
+  <%= stylesheet_link_tag 'global', 'page' %>
+
+  </head>
+<body>
+	
+<!-- this is where the quick navi goes -->
+	<div id="headOne">
+		<div id="headOneInner">
+		<div id="quickNavi">
+			<%= render :partial => 'navigation/navi_switch' %>
+		</div>
+		</div>
+	</div>
+			
+<!-- main frame should encapsulate all content -->
+	<div id="pageMainFrame">
+		<div id="pageLeft">
+		<% if flash[:notice] then %>
+		<p class="flash"><%= flash[:notice] %></p>
+		<% elsif flash[:error] %>
+		<p class="error"><%= flash[:error] %></p>
+		<% else %>
+		<% end %>
+			<%= yield %>
+		</div>
+		
+		<div id="pageRight">
+			<div id="innerRight">
+			 <%= render :partial => "navigation/quicklinks" %>
+			 <%= render :partial => "member/profile/markdown" %>			
+			</div>
+		</div>
+	</div>
+	
+	<!-- start foot area's one and two -->
+	<div id="footOne">
+		<div id="footOneInner">
+			<div id="footOneColumnOne">
+				<%= render :partial => 'home/foot_one_column_one' %>
+			</div>
+			<div id="footOneColumnTwo">
+				<%= render :partial => 'home/foot_one_column_two' %>
+			</div>
+			<div id="footOneColumnThree">
+				<%= render :partial => 'home/foot_one_column_three' %>
+			</div>
+
+		</div>
+	</div>
+
+		
+<!-- footer for tiny content, disclaimer etc -->
+	<div id="footTwo">
+		<div id="footTwoInner">
+			<%= render :partial => "navigation/foot_two_info" %>		
+		</div>
+	</div>
+	
+<!-- Google Anaylitics -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-933746-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+
+</body>
+</html>

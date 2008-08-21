@@ -1,0 +1,63 @@
+<head><%= stylesheet_link_tag 'global', 'home' %>
+	
+<style> body	{background-color: #fdfee2}
+</style>
+</head>   	
+	<!-- start today -->
+	<% @starts_today.each do |event| %>
+   		<div id="eventTodayBoxWrapper">
+   	
+   		<p class="currentEventBoxTitle">
+   		<%= event.title %>
+   		<span class="currentEventBoxCategory">
+   		<%= event.category %>
+   		</span>
+   		</p>
+
+   		<% if event.artist? %>
+   		<p class="currentEventBoxArtist">
+   		<%= event.artist %></p>
+   		<% end %>
+
+   		<p class="eventBoxDetails">
+   		<b><%= event.starttime.strftime("%I:%M%p") %></b> |
+   		<%= event.location %> 
+   		</p>
+   		
+   		<span class="eventBoxLink">
+   		<%= link_to "More information", 
+   					{:controller => "pages", :action => "event",
+   					:id => event}, :target => '_top' %>
+   		</span>
+   		</div>
+	<% end %>
+	
+	<!-- ends today -->
+	<% @ends_today.each do |event| %>
+   		<div id="eventTodayBoxWrapper">
+   	
+   		<p class="currentEventBoxTitle">
+   		<%= event.title %>
+   		<span class="currentEventBoxCategory">
+   		<%= event.category %>
+   		</span>
+   		</p>
+
+   		<% if event.artist? %>
+   		<p class="currentEventBoxArtist">
+   		<%= event.artist %></p>
+   		<% end %>
+
+   		<p class="eventBoxDetails">
+   		<b>Ends today</b> |
+   		<%= event.location %> 
+   		</p>
+   		
+   		<span class="eventBoxLink">
+   		<%= link_to "More information",
+   					{:controller => "pages", :action => "event",
+   					:id => event}, :target => '_top' %>
+   		</span>
+   		</div>
+	<% end %>
+	
