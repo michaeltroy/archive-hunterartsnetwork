@@ -19,5 +19,5 @@ production:
   adapter: mysql
   database: hunterArts_production
   username: root
-  password: volt77ron19
+  password: monsterz
   socket: /var/run/mysqld/mysqld.sock
