@@ -1,6 +1,6 @@
 ---
 port: '8000'
-cwd: /home/mike/hunterartsnetwork.org/current
+cwd: /home/mike/hunterartsnetwork.org/current/
 log_file: log/mongrel.log
 environment: production
 address: 127.0.0.1
