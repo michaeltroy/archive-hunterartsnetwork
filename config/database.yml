@@ -18,6 +18,6 @@ test:
 production:
   adapter: mysql
   database: hunterArts_production
-  username: root
+  username: mike
   password: monsterz
   socket: /var/run/mysqld/mysqld.sock
