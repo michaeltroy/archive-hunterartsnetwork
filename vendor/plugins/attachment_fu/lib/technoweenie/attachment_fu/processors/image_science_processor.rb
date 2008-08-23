@@ -52,9 +52,23 @@ module Technoweenie # :nodoc:
               end
             else
               new_size = [img.width, img.height] / size.to_s
+              
+            # hack for crop
+             if size.ends_with? "!"
+                aspect = new_size[0].to_f / new_size[1].to_f
+                ih, iw = img.height, img.width
+                w, h = (ih * aspect), (iw / aspect)
+                w = [iw, w].min.to_i
+                h = [ih, h].min.to_i
+                img.with_crop( (iw-w)/2, (ih-h)/2, (iw+w)/3, (ih+h)/3) {
+                |crop| crop.resize(new_size[0], new_size[1], &grab_dimensions ) }
+              else
+              
               img.resize(new_size[0], new_size[1], &grab_dimensions)
             end
+            
           end
+        end
       end
     end
   end

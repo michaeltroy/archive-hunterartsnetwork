@@ -1,8 +1,12 @@
 	<div id="memberSpringBoard">
-<img src="/images/han-logo.jpg" alt="Hunter Arts Network logo">
-	<% for art in @random_thumb %>
-	<%= link_to image_tag(art.public_filename(:thumb)),
+	<img src="/images/han-logo.jpg" alt="Hunter Arts Network logo">
+
+
+	<% @random_thumb.each do |art| %>
+
+	<%= link_to image_tag(art.public_filename(:crop)),
 					:controller => "pages", :action => "profile", 
 					:id => art.member.id %>
 	<% end %>
+	
 	</div>

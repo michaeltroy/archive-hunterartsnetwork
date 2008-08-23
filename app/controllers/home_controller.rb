@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @starts_today = Event.starts_today
     @ends_today = Event.ends_today
     @members = Member.find(:all, :conditions => ['role = ? and public = ?', 'member', 1])
-    @random_thumb = Artwork.random_thumbnail  
+    @random_thumb = Artwork.random_thumbnail
   end
   
   def upcoming

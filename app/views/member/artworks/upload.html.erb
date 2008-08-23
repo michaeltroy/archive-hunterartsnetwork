@@ -4,11 +4,11 @@
 	<div id="section">
 		<div id="hint"><b>HINT</b>
 		You can always delete unwanted or outdated images.<br />
-		<span class="hintAlert">IMAGE MUST BE LESS THAN 500kb IN FILE SIZE!</span>
+		<span class="hintAlert">IMAGE MUST BE LESS THAN 1MB IN FILE SIZE!</span>
 		</div>
     
-		<% form_for (:artwork, :url => "create",
-					 :html => { :multipart => true }) do |f| %>
+		<% form_for(:artwork, :url => "create",
+					:html => { :multipart => true }) do |f| %>
 			<p class="generalForm">					
 			<%= f.file_field :uploaded_data %> </p>
 		<div id="submit"><%= submit_tag 'Upload' %></div>

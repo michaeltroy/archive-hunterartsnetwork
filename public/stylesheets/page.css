@@ -567,14 +567,17 @@ mini gallery */
 }
 
 #artworkThumb {
-	margin-right: 4px;
-	width: 134px;
+	margin-right: 8px;
+	width: 174px;
 	float: left;
 	margin-bottom: 8px;
+	height: 184px;
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+	padding: 6px;
 }
 
 .artwork_thumb {
-	width: 130px;
 	border-style: none;
 	margin-right: 6px;
 	margin-bottom: 3px;
@@ -583,7 +586,7 @@ mini gallery */
 #artworkText {
 	font-size: 86%;
 	color: #556066;
-	height: 66px;
+	margin-bottom: 4px;
 }
 
 #artworkEditForm {
