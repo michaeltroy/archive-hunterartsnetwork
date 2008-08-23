@@ -16,7 +16,7 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: mysqlc
+  adapter: mysql
   database: hunterArts_production
   username: root
   password: monsterz
