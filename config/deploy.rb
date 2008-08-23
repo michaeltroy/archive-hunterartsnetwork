@@ -33,7 +33,7 @@ set :deploy_to, "/home/#{user}/#{application}"
 set :scm, "git"
 set :deploy_via, :remote_cache 
 set :repository, "/home/#{user}/hunterartsnetwork.git"
-set :branch, "deploy"
+#set :branch, "deploy"
 
 # =============================================================================
 # SSH OPTIONS
