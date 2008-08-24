@@ -1,4 +1,4 @@
-<b><%= "#{@active.username} (member)" %></b> |
+<b class="username"><%= "Hi #{@active.username}" %></b> |
 <%= link_to "Logout", :controller => '/sessions', :action => 'destroy' %> |
 <%= link_to 'Home', 	:controller => "/" %> |
 <%= link_to "My profile", :controller => "member/profile", 

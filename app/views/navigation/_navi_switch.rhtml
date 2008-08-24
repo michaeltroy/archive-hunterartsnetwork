@@ -11,8 +11,8 @@
 
 	<% else %>
 		
-	<div id="headOneInnerLogin">
-	<%= link_to "Hey members, login here!", :controller => :sessions, :action => :login %></div> | 
+	<%= link_to '<b class="login">Members login here!</b>',
+		:controller => :sessions, :action => :login %> | 
 	<%= link_to 'Home',  :controller => :home %>
 	
 	<% end %>

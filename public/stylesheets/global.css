@@ -1,4 +1,7 @@
-/* @override http://localhost:3000/stylesheets/global.css */
+/* @override 
+	http://localhost:3000/stylesheets/global.css
+	http://localhost:4000/stylesheets/global.css
+*/
 
 /* ---------------------------------------
 formatting */
@@ -7,8 +10,8 @@ body {
 	font-size: .8em;
 	margin: 0;
 	padding: 0;
-	background: #fff repeat-x;
 	line-height: 16px;
+	background-repeat: repeat-x;
 }
 
 p {
@@ -38,8 +41,7 @@ h1, h2, h3, h4 {
 h1 {
 	padding-bottom: 8px;
 	padding-top: 3px;
-	font-size: 180%;
-	font-weight: bold;
+	font-size: 164%;
 	line-height: 22px;
 }
 
@@ -59,28 +61,28 @@ h4 {
 alerts */
 
 #homeAlertOne {
-	background-color: #e0feff;
+	background-color: #eaeaea;
 	text-align: center;
-	width: 931px;
-	font-size: 190%;
+	font-size: 144%;
 	border-style: none;
 	margin-right: auto;
-	margin-top: 12px;
+	margin-top: 0;
 	margin-left: auto;
+	padding-top: 8px;
+	padding-bottom: 10px;
 }
 
 #homeAlertOne a:link {
-	color: #5294fc;
+	color: #a7a7a7;
 }
 
 #homeAlertOne a:visited {
-	color: #5294fc;
+	color: #a7a7a7;
 }
 
 #homeAlertOne p {
-	color: #2034fa;
+	color: #5e5e5e;
 	margin: 0;
-	padding: 12px;
 }
 
 #homeAlertTwo {
@@ -88,7 +90,6 @@ alerts */
 	text-align: center;
 	width: 931px;
 	margin-right: auto;
-	margin-top: 12px;
 	margin-left: auto;
 	border: 1px solid #fbf34f;
 	padding: 6px;
@@ -124,8 +125,8 @@ head one */
 
 #headOne {
 	padding: 0;
-	background: #eaeaea repeat-x;
 	border-bottom: 1px solid #e1e1e1;
+	background: #5e5e5e repeat-x;
 }
 
 #headOneInner {
@@ -136,16 +137,6 @@ head one */
 	padding: 8px;
 }
 
-#headOneInnerLogin {
-	background-color: #b3f938;
-	float: left;
-	margin-right: 4px;
-	font-weight: bold;
-	border: 1px solid #87f939;
-	padding-right: 4px;
-	padding-left: 4px;
-}
-
 /* ---------------------------------------
 quicknavi */
 
@@ -153,19 +144,28 @@ quicknavi */
 	margin-right: auto;
 	margin-left: auto;
 	border-bottom-color: #5e5e5e;
-	color: #919191;
+	color: #bebebe;
+	text-align: right;
+}
+
+#quickNavi b.username {
+	color: #fff;
+}
+
+#quickNavi b.login {
+	color: #fff;
 }
 
 #quickNavi a:link {
 	text-decoration: none;
 	border-bottom-color: #5e5e5e;
-	color: #919191;
+	color: #d4d4d4;
 }
 
 #quickNavi a:visited {
 	text-decoration: none;
 	border-bottom-color: #5e5e5e;
-	color: #919191;
+	color: #d4d4d4;
 }
 
 /* ---------------------------------------
@@ -195,7 +195,6 @@ foot one */
 
 #footOne h3 {
 	font-size: 140%;
-	font-weight: bold;
 }
 
 #footOne a:link {
@@ -211,8 +210,8 @@ foot one */
 	width: 936px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 20px;
 	padding-bottom: 20px;
+	padding-top: 10px;
 }
 
 #footOneColumnOne {
