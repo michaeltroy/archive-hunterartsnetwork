@@ -6,8 +6,8 @@ class Admin::ArticlesController < Admin::DashboardController
   end
   
   def list
-    @articles = Article.find(:all)
-  end
+    @articles = Article.paginate :page => params[:page], 
+                                 :per_page => 12, :order => "created_at DESC"  end
   
   def new
     # @article = article.new(params[:article])

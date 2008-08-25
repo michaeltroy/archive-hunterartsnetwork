@@ -1,0 +1,8 @@
+	<p><h2>Current events</h2>
+	<% if @current %>
+	<% @current.each do |current| %>	
+	<%= link_to "#{current.title}", :controller => "pages", 
+									:action => "event", :id => current %> 
+	<b><%= current.category %></b>
+	<%= current.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>

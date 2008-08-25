@@ -1,0 +1,9 @@
+	<p><h2><span class="upcoming">
+		Upcoming events</span></h2>
+	<% if @future %>
+	<% @future.each do |future| %>
+	<%= link_to "#{future.title}", :controller => "pages", 
+								   :action => "event", :id => future %> 
+	<b><%= future.category %></b>
+	<%= future.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>

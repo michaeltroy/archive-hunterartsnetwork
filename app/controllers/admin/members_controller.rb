@@ -7,7 +7,8 @@ class Admin::MembersController < Admin::DashboardController
   end
   
   def list
-    @member = Member.find(:all)
+    @members = Member.paginate :page => params[:page], 
+                             :per_page => 12, :order => "created_at DESC"
   end
   
   def new

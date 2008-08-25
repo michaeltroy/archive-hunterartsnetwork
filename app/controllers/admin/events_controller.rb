@@ -3,14 +3,16 @@ class Admin::EventsController < Admin::DashboardController
   before_filter :access_admin_only
 
   def index
+    redirect_to :action => :list
   end
   
   def list
-    @events = Event.find(:all)
+    @events = Event.paginate :page => params[:page], 
+                             :per_page => 12, :order => "created_at DESC"
   end
   
   def new
-    # @event = Event.new(params[:event])
+    @event = Event.new(params[:event])
   end
   
   def create

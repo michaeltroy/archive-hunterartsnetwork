@@ -7,7 +7,8 @@ class PagesController < ApplicationController
   end
   
   def articles
-    @articles = Article.find(:all, :order => "created_at")
+    @articles = Article.paginate :page => params[:page], 
+                                 :per_page => 4, :order => "created_at DESC"
   end
   
   def profile
@@ -23,9 +24,12 @@ class PagesController < ApplicationController
   end
   
   def events
-    @future = Event.future
-    @current = Event.current
-    @past = Event.past
+    @current = Event.current.paginate :page => params[:page], 
+                             :per_page => 8, :order => "created_at DESC"
+    @future = Event.future.paginate :page => params[:page], 
+                             :per_page => 8, :order => "created_at DESC"
+    @past = Event.past.paginate :page => params[:page], 
+                             :per_page => 8, :order => "created_at DESC"
   end
   
   def member_directory

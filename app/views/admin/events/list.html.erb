@@ -4,8 +4,5 @@
 
 
 <%= render :partial => 'list' %>
+<%= will_paginate @posts %>
 
-<p><%= link_to "List a new event",
-			:controller => 'events', :action => 'new' %> |
-<%= link_to "Back to the dashboard",
-			:controller => 'admin/dashboard', :action => 'index' %></p>

@@ -1,0 +1,10 @@
+
+	<p><h2><span class="past">
+	Past events</span></h2>
+	<% if @past %>
+	<% @past.each do |past| %>
+	<%= link_to "#{past.title}", :controller => "pages", 
+								 :action => "event", :id => past %> 
+	<b><%= past.category %></b>
+	<%= past.opendate.strftime("%A %d %b %y") %><br />
+	<% end %><% end %></p>
