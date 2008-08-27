@@ -1,0 +1,7 @@
+<div id="backNavi">
+<%= link_to 'Dashboard >', :controller => 'admin/dashboard' %>
+<span class="page">Updates > </span>Listing of all updates</div>
+
+
+<%= render :partial => 'list' %>
+<%= will_paginate @updates %>

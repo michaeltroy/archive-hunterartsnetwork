@@ -1,7 +1,5 @@
 class Admin::EventsController < Admin::DashboardController
   
-  before_filter :access_admin_only
-
   def index
     redirect_to :action => :list
   end

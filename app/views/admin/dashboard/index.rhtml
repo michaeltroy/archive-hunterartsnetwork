@@ -38,5 +38,16 @@
   		<%= link_to "Full list of articles",
   					:controller => 'articles', :action => 'list' %></p>
 	</div>
+	
+	<!-- articles - top 5 articles here -->
+	<div id="dashboardListSection">
+  		<h3>Updates</h3>
+  		<h4>Top 5 most recently sent updates</h4>
+  		<%= render :partial => "admin/updates/list" %>
+  		<p><%= link_to "Create new update message",
+  					:controller => 'updates', :action => 'new' %> |
+  		<%= link_to "Full list of updates",
+  					:controller => 'updates', :action => 'list' %></p>
+	</div>
 
 </div>

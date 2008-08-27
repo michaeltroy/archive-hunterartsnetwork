@@ -1,0 +1,26 @@
+
+<div id="dashboardList">
+<table class="dashboardTable", cellspacing="0">
+	<tr>
+	<th class="left">Title</th>
+	<th>Created</th>
+	<th></th>
+	</tr>
+	<tr>
+	<% @updates.each do |update| %>
+		
+	<td class="left"><b><%= update.title.first(20).capitalize %>... </b></td>
+	<td><%= update.created_at.strftime("%d %a %b %y") %></td>
+	<td class="right">
+		<%= link_to "Edit",    :controller => "admin/updates", 
+						       :action => "show", :id => update %> | 
+		<%= link_to "Remove", {:controller => "admin/updates",
+							   :action => "destroy", :id => update},
+							  {:method => :post,
+							   :confirm => "Are you sure about this?"} %>
+		
+		</td>
+	</tr>
+	<% end %>
+</table>
+</div>

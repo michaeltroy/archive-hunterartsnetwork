@@ -1,7 +1,5 @@
 class Admin::MembersController < Admin::DashboardController
   
-  before_filter :access_admin_only
-
   def index
     active
   end

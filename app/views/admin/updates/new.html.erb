@@ -1,0 +1,11 @@
+	<h1>New update</h1>
+	
+	<% form_tag :controller => "admin/updates",
+				:action => 'create', :id => @update do %>
+	<!-- form -->
+	<%= render :partial => 'admin/updates/form' %>
+
+	<div id="section">
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	<% end %>

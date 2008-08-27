@@ -1,0 +1,15 @@
+	<div id="errors">
+	<%= error_messages_for :update %>
+	</div>
+	
+	<div id="section">
+		<p class="subform">
+			<%= label(:update, :title, 'Title:', :class => "label") %>
+			<%= text_field :update, :title, :class => "field" %></p>
+	</div>
+	
+	<div id="section">
+		<p class="subform">
+			<%= text_area :update, :copy %></p>		
+	</div>
+			

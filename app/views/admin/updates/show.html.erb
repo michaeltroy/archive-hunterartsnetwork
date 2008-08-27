@@ -1,0 +1,15 @@
+	<h1>Show update</h1>
+	
+	<% form_tag :controller => "admin/updates",
+				:action => 'update', :id => @update do %>
+	<!-- form -->
+	<%= render :partial => 'admin/updates/form' %>
+
+	<div id="section">
+		<div id="submit"><%= submit_tag "Submit" %></div>
+	</div>
+	
+	<%= link_to "Send update now", 
+				:controller => "admin/updates", 
+				:action => "send_update_now", :id => @update %>			
+	<% end %>

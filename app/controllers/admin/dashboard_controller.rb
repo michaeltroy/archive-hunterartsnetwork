@@ -22,6 +22,7 @@ class Admin::DashboardController < Admin::SessionsController
     @articles = Article.find(:all, :limit => 5, :order => 'created_at DESC')
     @events = Event.find(:all, :order => :opendate, 
                                :limit => 5, :order => 'created_at DESC')
+    @updates = Update.find(:all, :limit => 5, :order => 'created_at DESC')
   end
   
 end

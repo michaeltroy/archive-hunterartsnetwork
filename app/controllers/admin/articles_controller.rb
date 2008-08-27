@@ -1,7 +1,5 @@
 class Admin::ArticlesController < Admin::DashboardController
-  
-  before_filter :access_admin_only
-    
+      
   def index
   end
   
@@ -10,7 +8,7 @@ class Admin::ArticlesController < Admin::DashboardController
                                  :per_page => 12, :order => "created_at DESC"  end
   
   def new
-    # @article = article.new(params[:article])
+    @article = article.new(params[:article])
   end
   
  def create

@@ -7,6 +7,7 @@ class Member < ActiveRecord::Base
   ## Relationships
   has_many :articles
   has_many :events
+  has_many :updates
   has_many :artworks, :dependent => :destroy
   has_many :sessions
   
