@@ -52,8 +52,7 @@ class Admin::UpdatesController < Admin::DashboardController
   ## Extra methods
   def send_update_now
     @update = Update.find(params[:id])
-    @member = Member.find(:all)
-    @email = "hello@engineactive.com"
+    @list = Member.member_mailout_list
     # deliver email for new member
       UpdateMailer.deliver_new_update(@update)
       redirect_to :controller => "admin/dashboard"

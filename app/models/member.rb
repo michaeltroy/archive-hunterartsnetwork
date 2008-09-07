@@ -47,6 +47,11 @@ class Member < ActiveRecord::Base
     member = Member.find(:first, :conditions => ['email = ?', email])
   end
   
+  ## Get member email address list
+  def self.member_mailout_list
+    Member.find(:all)
+  end
+  
   ## Find and sort direct from ActiveRecord
   def self.ceramics
     Member.find(:all, :conditions => ['category = ? and medium = ? and public =?', 

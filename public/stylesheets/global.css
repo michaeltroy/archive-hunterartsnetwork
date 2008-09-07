@@ -3,14 +3,13 @@
 	http://localhost:4000/stylesheets/global.css
 */
 
-/* ---------------------------------------
+/* ------------------
 formatting */
 
 body {
-	font-size: .8em;
 	margin: 0;
-	padding: 0;
-	line-height: 16px;
+	padding: 0 24px 24px;
+	font: .8em/16px Helvetica, Arial, sans-serif;
 	background-repeat: repeat-x;
 }
 
@@ -34,7 +33,6 @@ h1, h2, h3, h4 {
 	font-weight: normal;
 	font-style: normal;
 	margin-top: 2px;
-	font-family: Helvetica, Arial, sans-serif;
 	margin-bottom: 6px;
 }
 
@@ -57,19 +55,23 @@ h4 {
 	
 }
 
-/* ---------------------------------------
+/* ------------------
+alerts */
+
+#wrapper {
+	overflow: auto;
+	width: 960px;
+}
+
+/* ------------------
 alerts */
 
 #homeAlertOne {
 	background-color: #eaeaea;
 	text-align: center;
-	font-size: 144%;
+	font-size: 124%;
 	border-style: none;
-	margin-right: auto;
-	margin-top: 0;
-	margin-left: auto;
-	padding-top: 8px;
-	padding-bottom: 10px;
+	margin-bottom: 24px;
 }
 
 #homeAlertOne a:link {
@@ -82,7 +84,7 @@ alerts */
 
 #homeAlertOne p {
 	color: #5e5e5e;
-	margin: 0;
+	padding: 8px;
 }
 
 #homeAlertTwo {
@@ -111,7 +113,7 @@ alerts */
 	color: #444;
 }
 
-/* ---------------------------------------
+/* ------------------
 clock */
 #clock {
 	background-color: #7a7ffb;
@@ -120,81 +122,70 @@ clock */
 	padding: 4px;
 }
 
-/* ---------------------------------------
+/* ------------------
 head one */
 
-#headOne {
-	padding: 0;
+#head {
 	border-bottom: 1px solid #e1e1e1;
-	background: #5e5e5e repeat-x;
+	margin-bottom: 24px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+	background-repeat: repeat-x;
 }
 
-#headOneInner {
-	width: 936px;
-	margin-right: auto;
-	margin-left: auto;
-	font-family: Helvetica, Arial, sans-serif;
-	padding: 8px;
-}
-
-/* ---------------------------------------
+/* ------------------
 quicknavi */
 
 #quickNavi {
 	margin-right: auto;
 	margin-left: auto;
 	border-bottom-color: #5e5e5e;
-	color: #bebebe;
 	text-align: right;
 }
 
 #quickNavi b.username {
-	color: #fff;
+	color: #262626;
 }
 
 #quickNavi b.login {
-	color: #fff;
+	color: #262626;
 }
 
 #quickNavi a:link {
 	text-decoration: none;
 	border-bottom-color: #5e5e5e;
-	color: #d4d4d4;
+	color: #262626;
 }
 
 #quickNavi a:visited {
 	text-decoration: none;
 	border-bottom-color: #5e5e5e;
-	color: #d4d4d4;
+	color: #262626;
 }
 
-/* ---------------------------------------
+/* ------------------
 foot one */
 
-#footOne {
-	background-color: #eaeaea;
-	font-family: Helvetica, Arial, sans-serif;
+#foot {
+	border-top: 1px dashed #d4d4d4;
+	padding-top: 12px;
 	clear: both;
-	border-top: 1px solid #e1e1e1;
-	color: #444;
-	padding-top: 4px;
+	overflow: auto;
+	width: 960px;
+	margin-bottom: 24px;
 }
 
-#footOne img {
-	border-style: none;
-	margin: 0;
+#foot p {
+	font: 86% "Lucida Grande", Lucida, Helvetica, Arial, sans-serif;
 }
 
-#footOneInner {
-	height: 230px;
+#foot h1 {
+	font-size: 144%;
 }
 
-#footOne h1 {
-	color: #444;
-}
-
-#footOne h3 {
-	font-size: 140%;
+#foot h2 {
+	font-size: 124%;
 }
 
 #footOne a:link {
@@ -206,32 +197,51 @@ foot one */
 #footOne a:visited {
 }
 
-#footOneInner {
-	width: 936px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 20px;
-	padding-top: 10px;
+#footColumnOne {
+	width: 150px;
+	float: left;
+	padding-right: 6px;
+	overflow: hidden;
 }
 
-#footOneColumnOne {
-	width: 300px;
+#footColumnTwo {
+	width: 150px;
+	float: left;
 	margin-right: 12px;
-	float: left;
+	padding-right: 6px;
+	overflow: hidden;
 }
 
-#footOneColumnTwo {
-	width: 302px;
+#footColumnThree {
+	width: 150px;
+	float: left;
+	padding-right: 6px;
+	overflow: hidden;
+}
+
+#footColumnFour {
+	width: 150px;
+	float: left;
 	margin-right: 12px;
-	float: left;
+	padding-right: 6px;
+	overflow: hidden;
 }
 
-#footOneColumnThree {
-	width: 310px;
+#footColumnFive {
+	width: 150px;
 	float: left;
+	padding-right: 6px;
+	overflow: hidden;
 }
 
-/* ---------------------------------------
+#footColumnSix {
+	width: 150px;
+	float: left;
+	padding-right: 6px;
+	overflow: hidden;
+}
+
+/* ------------------
 Subscribe form */
 
 #subscriber {
@@ -262,71 +272,19 @@ input#mb-hkkik-hkkik {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-/* ---------------------------------------
+/* ------------------
 quicknavi */
 
-#footTwo {
-	text-align: center;
-	clear: both;
-	background-color: #000;
-}
-
-#footTwoInner  {
-	width: 931px;
-	margin-left: auto;
-	margin-right: auto;
-	color: #a7a7a7;
-	font: 90% Helvetica, Arial, sans-serif;
-	padding: 12px 8px 8px;
-}
-
-#footTwo a:link {
-	color: #d4d4d4;
-	font-weight: bold;
-}
-
-#footTwo a:hover {
-	color: #d4d4d4;
-	font-weight: bold;
-}
-
-#footTwo a:visited {
-	color: #d4d4d4;
-	font-weight: bold;
-}
-
-/* ---------------------------------------
+/* ------------------
 foot information */
 
-.footAdvertise {
-	color: #de2b00;
+#developer {
+	margin-bottom: 24px;
+	padding-top: 12px;
+	border-top: 1px dashed #d4d4d4;
 }
 
-.footSmallText {
-	color: #5e5e5e;
-}
-
-.footMediumText {
-	padding-left: 5px;
-	color: #5e5e5e;
-}
-
-
-
-/* ---------------------------------------
-advertising */
-
-#advert {
-	margin-bottom: 10px;
-	border-style: none;
-}
-
-.smallAdvertText {
-	color: #5e5e5e;
-	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
-}
-
-/* ---------------------------------------
+/* ------------------
 error messages */
 
 #errorExplanation {

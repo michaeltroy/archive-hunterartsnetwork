@@ -3,14 +3,8 @@
 	http://www.hunterartsnetwork.org/stylesheets/page.css?1209611463
 */
 
-/* ---------------------------------------
+/* ------------------
 general styling */
-
-body {
-	margin: 0;
-	font-family: Helvetica, Arial, sans-serif;
-	background-repeat: repeat-x;
-}
 
 p.flash {
 	background-color: #88fa97;
@@ -59,19 +53,8 @@ p.description {
 	
 }
 
-#pageMainFrame {
-	border-style: none;
-	min-width: 700px;
-	color: #2d3235;
-	line-height: 16px;
-	width: 936px;
-	margin: 0 auto;
-	padding-bottom: 10px;
-	padding-top: 24px;
-}
 
-
-/* ---------------------------------------
+/* ------------------
 back navi */
 
 #backNavi {
@@ -84,7 +67,7 @@ back navi */
 	color: #ff4d12;
 }
 
-/* ---------------------------------------
+/* ------------------
 forms styling */
 
 textarea {
@@ -201,97 +184,60 @@ p.formHeading {
 	font-weight: bold;
 }
 
-/* ---------------------------------------
+/* ------------------
 page left */
 
-#pageLeft {
-	width: 604px;
-	min-height: 440px;
-	margin-right: 20px;
-	padding-bottom: 24px;
-	float: left;
+#page {
+	clear: both;
+	overflow: auto;
+	margin-bottom: 24px;
 }
 
-#pageLeftTop {
+/* ------------------
+page left */
+
+#content {
+	min-height: 440px;
+	width: 636px;
+	float: left;
+	margin-bottom: 24px;
+	margin-right: 12px;
+}
+
+#contentTop {
 	height: 20px;
 	background-repeat: no-repeat;
 }
 
-#pageLeftContent {
+#contentContent {
 	margin: 0;
 	padding: 0 12px 1px;
 }
 
-#pageLeftBottom {
+#contentBottom {
 	height: 26px;
 	background-repeat: no-repeat;
 }
 
-#pageLeft a:link {
+#content a:link {
 }
 
-#pageLeft a:visited {
+#content a:visited {
 }
 
-#pageLeft a:hover {
+#content a:hover {
 }
 
-/* ---------------------------------------
+/* ------------------
 page right */
 
-#pageRight {
-	width: 308px;
-	padding-bottom: 24px;
-	float: right;
+#sidebar {
+	float: left;
+	width: 312px;
+	height: 460px;
 }
 
-#innerRight {
-	color: #444;
-}
-
-#innerRight p {
-	margin-bottom: 6px;
-	margin-top: 0;
-}
-
-#innerRight h1 {
-	margin-bottom: 12px;
-	margin-top: 0;
-}
-
-#innerRight h2 {
-	color: #254344;
-	margin-bottom: 6px;
-	margin-top: 0;
-}
-
-#innerRight h3 {
-	margin-bottom: 6px;
-	margin-top: 0;
-}
-
-#innerRight h4 {
-	font-weight: bold;
-	margin-bottom: 6px;
-	margin-top: 0;
-}
-
-#innerRight a:link {
-	margin-top: 0;
-	margin-bottom: 6px;
-}
-
-#innerRight a:visited {
-	margin-top: 0;
-	margin-bottom: 6px;
-}
-
-#innerRight a:hover {
-	margin-top: 0;
-	margin-bottom: 6px;
-}
-
-/* ---------------------------------------
+/* ------------------
 member directory */
 
 #directoryCategory {
@@ -321,17 +267,14 @@ member directory */
 	margin-bottom: 12px;
 }
 
-/* ---------------------------------------
+/* ------------------
 public profile */
 
 #profileViews {
-	padding: 2px;
 	color: #e47d78;
-	border: 1px solid #f9fdb9;
 	font-style: italic;
 	margin-top: 2px;
 	margin-bottom: 8px;
-	background-color: #f9fdb9;
 }
 #publicGallery {
 }
@@ -377,17 +320,13 @@ public profile */
 	color: #787878;
 	font: italic 110% Georgia, "Times New Roman", Times, serif;
 }
-/* ---------------------------------------
+/* ------------------
  quicklinks */
  #quicklinks {
-	padding: 12px;
-		border: 2px solid #f9fdb9;
-
-	background-color: #f8fdcb;
 	margin-bottom: 12px;
 }
 
-/* ---------------------------------------
+/* ------------------
  markdown */
  #markdown {
 	padding: 12px;
@@ -402,7 +341,7 @@ public profile */
 #markdown p {
 }
 
-/* ---------------------------------------
+/* ------------------
  the dashboard */
 
 #adminUserInfo {
@@ -508,7 +447,7 @@ public profile */
 
 #stats {
 	padding: 8px;
-	background-color: #f9fdb9;
+	background-color: #d4d4d4;
 	margin-bottom: 8px;
 	display: none;
 }
@@ -525,17 +464,17 @@ public profile */
 }
 
 
-/* ---------------------------------------
+/* ------------------
 profile */
 
 .memberNumber {
 	color: #ff4d12;
-	font-size: 100%;
+	font: 100% Georgia, "Times New Roman", Times, serif;
 }
 
 .memberName {
 	color: #00789f;
-	font-size: 100%;
+	font: 100% Georgia, "Times New Roman", Times, serif;
 }
 
 #profile {
@@ -547,7 +486,7 @@ profile */
 	margin-bottom: 12px;
 }
 
-/* ---------------------------------------
+/* ------------------
 mini gallery */
 
 #miniGallery {
@@ -601,7 +540,7 @@ mini gallery */
 	padding-bottom: 0;
 }
 
-/* ---------------------------------------
+/* ------------------
 article */
 
 #article {
@@ -626,7 +565,7 @@ article */
 	font-weight: bold;
 }
 
-/* ---------------------------------------
+/* ------------------
 event */
 
 #eventArchive {
@@ -703,7 +642,7 @@ span.past {
 	
 }
 
-/* ---------------------------------------
+/* ------------------
 styling for article and event */
 
 .created, .publishDate {

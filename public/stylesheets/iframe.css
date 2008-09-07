@@ -1,0 +1,168 @@
+body {
+	font: .8em/16px Georgia, "Times New Roman", Times, serif;
+}
+
+/* @group noCurrentEvents */
+
+#noCurrentEvents {
+	height: 204px;
+	margin-bottom: 20px;
+	background-color: #f9fdb9;
+	border: 1px solid #fbf34f;
+	padding: 8px;
+}
+
+#noCurrentEvents p {
+	color: #835311;
+}
+
+#noCurrentEvents h1 {
+	color: #835311;
+}
+
+
+
+/* @end */
+
+.odd {
+	
+}
+
+.even {
+	background-color: #f6f6f6;
+}
+
+#eventContainer {
+	height: 220px;
+	margin-bottom: 20px;
+}
+
+#eventBoxWrapper {
+	margin-right: 8px;
+	margin-bottom: 4px;
+	padding: 4px;
+}
+
+#eventTodayBoxWrapper {
+	padding: 4px;
+	margin-bottom: 6px;
+	margin-right: 16px;
+}
+
+#archives {
+	margin-top: 8px;
+}
+
+.eventBoxCategory {
+	color: #5ca7d3;
+	background-color: #e6f2f2;
+	text-align: center;
+	text-transform: uppercase;
+	font: bold 9px Helvetica, Arial, sans-serif;
+	width: 3px;
+}
+
+.eventBoxTitle {
+	color: #444;
+	border-style: none;
+	border-color: #ff4d12;
+	font-size: 108%;
+	margin: 0;
+}
+
+.eventBoxArtist {
+	color: #787878;
+	font-size: 100%;
+	margin: 0;
+}
+
+.currentEventBoxCategory {
+	color: #5ca7d3;
+	background-color: #e6f2f2;
+	text-align: center;
+	width: 120px;
+	font: bold 9px Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.currentEventBoxTitle {
+	border-style: none;
+	border-color: #ff4d12;
+	font-size: 110%;
+	margin-bottom: 0;
+	margin-top: 1px;
+}
+
+.currentEventBoxArtist {
+	color: #787878;
+	font-size: 100%;
+	margin-bottom: 0;
+}
+
+.eventBoxSubtitle {
+}
+
+p.eventBoxDetails {
+	font-size: 94%;
+	margin: 0;
+}
+
+p.eventBoxLocation {
+	margin: 0;
+}
+
+.eventBoxCopy {
+	color: #787878;
+	margin-bottom: 2px;
+}
+
+.eventBoxClose {
+}
+
+.eventBoxLink {
+}
+
+.eventBoxCreated {
+}
+
+
+/* ------------------
+article listing */
+
+#articleBoxWrapper {
+	margin-bottom: 6px;
+	margin-right: 8px;
+	padding: 4px;
+}
+
+.articleBoxCategory {
+	color: #5ca7d3;
+	background-color: #e6f2f2;
+	text-align: center;
+	font: bold 9px Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+p.articleBoxTitle {
+	display: inline-block;
+	text-transform: capitalize;
+	font-size: 110%;
+	margin-bottom: 0;
+}
+
+p.articleBoxSubtitle {
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 0;
+	color: #787878;
+}
+
+p.articleBoxDate {
+	margin-bottom: 0;
+	color: #a7a7a7;
+}
+
+p.articleBoxCopy {
+	color: #787878;
+	margin-bottom: 0;
+}

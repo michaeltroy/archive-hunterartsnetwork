@@ -10,7 +10,7 @@ class UpdateMailer < ActionMailer::Base
   protected
   
   def email_base(update)
-    @recipients   =  @email
+    @recipients   =  
     @cc           = "archive <hello@engineactive.com>"
     @from         = "Hunter Arts Network <support@hunterartsnetwork.org>"
     @headers      = "Hunter Arts Network"

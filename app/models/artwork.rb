@@ -15,7 +15,6 @@ class Artwork < ActiveRecord::Base
     
   def self.random_thumbnail
     Artwork.find(:all,  :limit => 11,
-                 :conditions => ['thumbnail = ?', 'crop'],
                  :include => :member,
                  :conditions => ['role = ? and public = ?', 'member', 1], 
                  :order => 'rand()')
