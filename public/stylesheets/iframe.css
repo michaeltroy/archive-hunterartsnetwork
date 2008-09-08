@@ -1,46 +1,62 @@
+/* @override http://localhost:3000/stylesheets/iframe.css */
+
 body {
-	font: .8em/16px Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	font: .8em/16px Georgia, serif, Times;
 }
 
-/* @group noCurrentEvents */
-
-#noCurrentEvents {
-	height: 204px;
-	margin-bottom: 20px;
-	background-color: #f9fdb9;
-	border: 1px solid #fbf34f;
-	padding: 8px;
+.odd {
+	background-color: #fff;
 }
 
-#noCurrentEvents p {
-	color: #835311;
+.even {
+	background-color: #f5f5f5;
 }
 
-#noCurrentEvents h1 {
-	color: #835311;
+/* @group My Group */
+
+#iframe_listingWrapper {
+	padding: 6px;
+}
+
+#iframe_listingWrapper h1 {
+	margin-top: 0;
+	font-size: 124%;
+	margin-bottom: 0;
+	font-weight: normal;
+	font-style: normal;
+	color: #000;
+}
+
+#iframe_listingWrapper span.category {
+	font-size: 72%;
+	background-color: #f8e7f1;
+	color: #cb2e82;
+}
+
+#iframe_listingWrapper p.artist {
+	margin: 0;
+	font-size: 96%;
+	color: #919191;
+}
+
+#iframe_listingWrapper p.details {
+	margin: 0;
+	font-size: 96%;
+	color: #919191;
 }
 
 
 
 /* @end */
 
-.odd {
-	
-}
+/* ------------------
+article listing */
 
-.even {
-	background-color: #f6f6f6;
-}
-
-#eventContainer {
-	height: 220px;
-	margin-bottom: 20px;
-}
+/* ------------------
+article listing */
 
 #eventBoxWrapper {
-	margin-right: 8px;
-	margin-bottom: 4px;
-	padding: 4px;
 }
 
 #eventTodayBoxWrapper {
@@ -50,7 +66,6 @@ body {
 }
 
 #archives {
-	margin-top: 8px;
 }
 
 .eventBoxCategory {
@@ -89,14 +104,11 @@ body {
 	border-style: none;
 	border-color: #ff4d12;
 	font-size: 110%;
-	margin-bottom: 0;
-	margin-top: 1px;
 }
 
 .currentEventBoxArtist {
 	color: #787878;
 	font-size: 100%;
-	margin-bottom: 0;
 }
 
 .eventBoxSubtitle {
@@ -104,16 +116,13 @@ body {
 
 p.eventBoxDetails {
 	font-size: 94%;
-	margin: 0;
 }
 
 p.eventBoxLocation {
-	margin: 0;
 }
 
 .eventBoxCopy {
 	color: #787878;
-	margin-bottom: 2px;
 }
 
 .eventBoxClose {
@@ -130,9 +139,6 @@ p.eventBoxLocation {
 article listing */
 
 #articleBoxWrapper {
-	margin-bottom: 6px;
-	margin-right: 8px;
-	padding: 4px;
 }
 
 .articleBoxCategory {
@@ -147,22 +153,18 @@ p.articleBoxTitle {
 	display: inline-block;
 	text-transform: capitalize;
 	font-size: 110%;
-	margin-bottom: 0;
 }
 
 p.articleBoxSubtitle {
 	font-size: 100%;
 	font-weight: bold;
-	margin-bottom: 0;
 	color: #787878;
 }
 
 p.articleBoxDate {
-	margin-bottom: 0;
 	color: #a7a7a7;
 }
 
 p.articleBoxCopy {
 	color: #787878;
-	margin-bottom: 0;
 }

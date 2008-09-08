@@ -3,16 +3,16 @@
 	<% @articles.each do |article| %>
 	<div class="<%= cycle("odd", "even") %>">
 
-	<div id="articleBoxWrapper">
+	<div id="iframe_listingWrapper">
 	
-		<p class="articleBoxTitle">
+		<h1>
 		<%= article.title %>
-		<span class="articleBoxCategory">
+		<span class="category">
 		<%= article.category %>
 		</span>
-		</p>
+		</h1>
 	
-		<p class="articleBoxDate">	
+		<p class="details">	
 		<%= link_to "Read article", {:controller => "pages",
 				:action => "article", :id => article}, :target => '_top' %> |
 		<%= article.created_at.strftime("%A %d %B %y") %>

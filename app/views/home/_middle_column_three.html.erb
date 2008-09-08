@@ -1,9 +1,10 @@
-<h1><%= link_to "Directory", :controller => :pages, 
-								   :action => :member_directory %></h1>
+<h1><%= link_to "<b>People</b>", :controller => :pages, :action => :member_directory %></h1>
+
+<!-- artist spotlight -->
+<div id="spotlight">
+	<h1>Member spotlight</h1>
+</div>
+
 <!-- generate random member artwork thumbnails -->
 <%= render :partial => 'member_thumbs', :collection => @member %>		
 
-
-	<!-- news and articles -->
-	<div id="homeInfo">
-	</div>

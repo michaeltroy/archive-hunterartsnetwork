@@ -4,28 +4,26 @@
 	<% @future.each do |event| %>
 	<div class="<%= cycle("odd", "even") %>">
 		
-		<div id="eventBoxWrapper">
-		<p class="eventBoxTitle">
+		<div id="iframe_listingWrapper">
+		<h1>
 		<%= event.title %>
-		<span class="eventBoxCategory">
+		<span class="category">
 		<%= event.category %>
 		</span>
-		</p>
+		</h1>
 	
 		<% if event.artist? %>
-		<p class="eventBoxArtist"><%= event.artist %></p>
+		<p class="artist"><%= event.artist %></p>
 		<% end %>
 	
-		<p class="eventBoxDetails">
-		<b><%= event.opendate.strftime("%a %d %B %y") %></b> |
+		<p class="details">
+		<%= event.opendate.strftime("%a %d %B %y") %> |
 		<%= event.location.first(60) %>
 		</p>
 		
-		<span class="eventBoxLink">
 		<%= link_to "More information", 
    					{:controller => "pages", :action => "event",
    					:id => event}, :target => '_top'	 %>
-		</span>
 		</div>
 	</div>
 	<% end %>

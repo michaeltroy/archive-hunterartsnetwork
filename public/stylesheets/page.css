@@ -116,7 +116,7 @@ select {
 }
 
 #section {
-	background-color: #f5f5f5;
+	background-color: #eaeaea;
 	padding: 8px;
 	margin-bottom: 12px;
 	clear: both;
@@ -198,10 +198,11 @@ page left */
 
 #content {
 	min-height: 440px;
-	width: 636px;
+	width: 600px;
 	float: left;
 	margin-bottom: 24px;
-	margin-right: 12px;
+	margin-right: 24px;
+	padding-right: 24px;
 }
 
 #contentTop {
@@ -284,6 +285,7 @@ public profile */
 	margin-bottom: 12px;
 	color: #444;
 	float: left;
+	padding: 12px;
 }
 
 #publicProfile h1 {
@@ -293,6 +295,7 @@ public profile */
 
 #publicProfile h2 {
 	font-size: 140%;
+	color: #bebebe;
 }
 
 #publicProfile h3 {
@@ -324,6 +327,8 @@ public profile */
  quicklinks */
  #quicklinks {
 	margin-bottom: 12px;
+	padding: 12px;
+	background-color: #fff;
 }
 
 /* ------------------
@@ -473,7 +478,7 @@ profile */
 }
 
 .memberName {
-	color: #00789f;
+	color: #cb2e82;
 	font: 100% Georgia, "Times New Roman", Times, serif;
 }
 
@@ -506,14 +511,15 @@ mini gallery */
 }
 
 #artworkThumb {
-	margin-right: 8px;
 	width: 174px;
 	float: left;
-	margin-bottom: 8px;
 	height: 232px;
 	border: 1px solid #eaeaea;
 	background-color: #fff;
 	padding: 6px;
+	margin-right: 6px;
+	margin-bottom: 12px;
+	margin-left: 6px;
 }
 
 .artwork_thumb {

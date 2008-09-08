@@ -9,8 +9,8 @@ formatting */
 body {
 	margin: 0;
 	padding: 0 24px 24px;
-	font: .8em/16px Helvetica, Arial, sans-serif;
-	background-repeat: repeat-x;
+	font: .8em/16px Georgia, serif, Times;
+	background: #fafaf0 repeat-x;
 }
 
 p {
@@ -67,23 +67,24 @@ alerts */
 alerts */
 
 #homeAlertOne {
-	background-color: #eaeaea;
 	text-align: center;
 	font-size: 124%;
-	border-style: none;
 	margin-bottom: 24px;
+	border: 1px solid #fbf34f;
+	background-color: #f9fdb9;
+	display: none;
 }
 
 #homeAlertOne a:link {
-	color: #a7a7a7;
+	color: #865411;
 }
 
 #homeAlertOne a:visited {
-	color: #a7a7a7;
+	color: #865411;
 }
 
 #homeAlertOne p {
-	color: #5e5e5e;
+	color: #52340b;
 	padding: 8px;
 }
 
@@ -141,15 +142,14 @@ quicknavi */
 	margin-right: auto;
 	margin-left: auto;
 	border-bottom-color: #5e5e5e;
-	text-align: right;
 }
 
 #quickNavi b.username {
-	color: #262626;
+	color: #ff4d12;
 }
 
 #quickNavi b.login {
-	color: #262626;
+	color: #cb2e82;
 }
 
 #quickNavi a:link {
@@ -174,10 +174,11 @@ foot one */
 	overflow: auto;
 	width: 960px;
 	margin-bottom: 24px;
+	color: #444;
 }
 
 #foot p {
-	font: 86% "Lucida Grande", Lucida, Helvetica, Arial, sans-serif;
+	font-size: 86%;
 }
 
 #foot h1 {
@@ -282,6 +283,8 @@ foot information */
 	margin-bottom: 24px;
 	padding-top: 12px;
 	border-top: 1px dashed #d4d4d4;
+	color: #444;
+	font-size: 86%;
 }
 
 /* ------------------

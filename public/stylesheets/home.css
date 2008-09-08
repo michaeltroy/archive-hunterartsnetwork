@@ -10,10 +10,26 @@ general styling */
 	border: 1px solid #e1e1e1;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	margin-bottom: 12px;
+	height: 180px;
 }
 
 .iFrameToday {
 	border: 1px solid #fbf34f;
+}
+
+#eventContainer {
+	margin-bottom: 20px;
+	height: 264px;
+}
+
+#noCurrentEvents {
+	margin-bottom: 20px;
+	padding: 8px;
+	background-color: #e6f2f2;
+	height: 210px;
+}
+
+#noCurrentEvents h1 {
 }
 
 .disclaimer {
@@ -34,35 +50,36 @@ general styling */
 middle area */
 
 #middle {
-	overflow: auto;
-	margin-bottom: 24px;
 }
 
 #middleColumnOne {
-	width: 312px;
+	width: 300px;
 	float: left;
 	margin-right: 12px;
+	margin-bottom: 24px;
+	padding-right: 12px;
 }
 
 #middleColumnTwo {
-	width: 312px;
+	width: 300px;
 	border-right-width: 1px;
 	border-right-style: none;
 	float: left;
 	margin-right: 12px;
+	margin-bottom: 24px;
+	padding-right: 12px;
 }
 
 #middleColumnThree {
 	width: 312px;
 	padding-right: 0;
 	float: left;
+	margin-bottom: 24px;
 }
 
 #middle h1 {
-	color: #444;
+	color: #52340b;
 	font-size: 164%;
-	font-weight: normal;
-	font-style: normal;
 }
 
 #middle img {
@@ -81,17 +98,26 @@ Member lauch pad */
 
 #memberSpringBoard img {
 	float: left;
-	padding: 2px;
+	padding: 4px;
 	border: 1px solid #eaeaea;
+	margin-bottom: 6px;
 	margin-right: 4px;
-	margin-bottom: 4px;
+	margin-left: 2px;
+	background-color: #eaeaea;
 }
 
-#homeInfo {
-	clear: both;
-	padding-top: 12px;
+/* ------------------
+middle area */
+
+#spotlight {
+	background-color: #e6f2f2;
+	margin-bottom: 24px;
+	padding: 8px;
+	height: 184px;
 }
 
-#homeInfo h2 {
-	font-weight: bold;
+#spotlight h1 {
+	color: #444;
+	font-size: 144%;
+	margin-top: 0;
 }

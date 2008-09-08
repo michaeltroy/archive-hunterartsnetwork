@@ -6,17 +6,18 @@
 		</iframe>
 	</div>
 	<% else %>
-	<div id="noCurrentEvents">
 		<h1>Something on today?</h1>
-		<p>We currently have no events or exhibitions listed for today. If you know of an event or an exhibition on today, please email details to <%= mail_to 'support@huterartsnetwork.org' %> 
-		</p>
+		<div id="noCurrentEvents">
+		<p>We currently have no events or exhibitions listed for today. If you know of an event or an exhibition on today, please email details to <%= mail_to 'support@huterartsnetwork.org', "Hunter Arts Network" %>.</p> 
+			
 		<p>If you are currently a member, you can list the event or exhibition details. Just login to your profile page and list the new event – that's it!</p>
-	</div>
+		</div>
 	<% end %>
 
-<div id="eventContainer">	
+	<div id="eventContainer">	
 	<h1>Current events</h1>
-	<iframe src="<%= url_for :controller => :home, :action => :current_events %>"
-	  	class="iFrame" height="" frameborder="0">
+	<iframe 
+		src="<%= url_for :controller => :home, :action => :current_events %>" 
+		class="iFrame" height="" frameborder="0">
 	</iframe>
 </div>

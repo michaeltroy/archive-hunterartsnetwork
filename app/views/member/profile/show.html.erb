@@ -1,9 +1,9 @@
 	
 	<h1>Your profile page</h1>
 	<h1><span class="memberName">
-		<%= @profile.username %></span>
-		<span class="memberNumber">No:<%= @profile.number %></span></h1>
-	<h2>Member account name (<%= @profile.firstname %> <%= @profile.surname %>)</h2>
+		Username <%= @profile.username %></span></h1>
+	<h2>Account name: <%= @profile.firstname %> <%= @profile.surname %>
+		(Number <%= @profile.number %>)</h2>
 	
 	<%= error_messages_for :profile %>
 	
@@ -128,7 +128,6 @@
 		
 	<div id="hint"><b>HINT</b> Some public areas will display cropped versions of your images. </div>
 	
-	<div id="section">
 		<div id="miniGallery">
 		<%= render :partial => "member/artworks/mini_gallery" %>
 		
@@ -137,6 +136,5 @@
 		:controller => 'member/artworks', :action => 'upload' %>
 		</div>
 
-		</div>
 	</div>
 	

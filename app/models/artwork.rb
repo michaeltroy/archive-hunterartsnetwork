@@ -14,7 +14,7 @@ class Artwork < ActiveRecord::Base
   validates_attachment :size => "Image file size is too big. It must be 1MB or less"
     
   def self.random_thumbnail
-    Artwork.find(:all,  :limit => 11,
+    Artwork.find(:all,  :limit => 22,
                  :include => :member,
                  :conditions => ['role = ? and public = ?', 'member', 1], 
                  :order => 'rand()')
