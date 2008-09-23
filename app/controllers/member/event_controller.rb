@@ -9,17 +9,27 @@ class Member::EventController < Member::ProfileController
   end
   
   def new
-    # @event = Event.new(params[:event])
+    @event = Event.new(params[:event])
   end
   
   def create
     @event = Event.new(params[:event])
-    @event = @active.events.build(params[:event])
-    if @event.update_attributes(params[:event])
-      redirect_to :controller => 'member/profile', :action => :show, :id => active
-      flash[:notice] = "A new event has been created"
-    else
-      render :action => "new"
+    @image = Image.new(:uploaded_data => params[:image_file])
+    @blend = EventBlend.new(@event, @image)
+    # respond to format
+    respond_to do |format|
+      if @blend.save
+        flash[:notice] = "Event was saved"
+        format.html {redirect_to @event}
+        format.xml  {render :xml => @event,
+                            :status => :created,
+                            :location => @event}
+      else
+        flash[:notice] = "Event was NOT"
+        format.html {render :action => :new}
+        format.xml  {render :xml => @event.errors,
+                            :status => :unprocessable_entity}
+      end
     end
   end
   
@@ -33,13 +43,22 @@ class Member::EventController < Member::ProfileController
   end
   
   def update
-    @event = Event.find(params[:id])
-    if @event.update_attributes(params[:event])
-      redirect_to :controller => "member/profile", :action => :show, :id => active
-      flash[:notice] = "Event has been updated"
-    else
-      render :action => :show
-    end
+   @event = Event.find(params[:id])
+   @image = @event.image
+   @blend = EventBlend.new(@event, @image)
+   # responf to format
+   respond_to do |format|
+     if @blend.update_attributes(params[:album], params[:image_file])
+       flash[:notice] = "Event was updated"
+       format.html {redirect_to @event}
+       format.xml  {head :ok}
+     else
+       @event = @blend.image
+       format.html {render :action => :show}
+       format.xml  {render :xml => @event.errors,
+                           :status => :unprocessable_entity}
+     end
+   end
   end
   
   def destroy

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 13) do
+ActiveRecord::Schema.define(:version => 16) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "updated_at"
   end
 
+  create_table "event_blends", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "event_mailers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -57,6 +62,20 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "starttime"
     t.text     "copy"
     t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "event_id"
+    t.integer  "parent_id"
+    t.integer  "size"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "content_type"
+    t.string   "filename"
+    t.string   "thumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -93,6 +112,11 @@ ActiveRecord::Schema.define(:version => 13) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "update_mailers", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "updates", :force => true do |t|
     t.string   "title"

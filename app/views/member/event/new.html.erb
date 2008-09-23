@@ -1,11 +1,70 @@
 	<h1>New event</h1>
 	
-	<% form_tag :controller => "member/event",
-				:action => 'create', :id => @event do %>
-	<!-- form -->
-	<%= render :partial => 'member/event/form' %>
+	<div id="errors">
+	<%= error_messages_for :event, :image %>
+	</div>
+		
+   	<% form_for(@event, :html => { :multipart => true }) do |event| %>
+
+   <!-- form starts -->
+   <!-- basic event details -->
+	<div id="section">			
+	  <p class="subform">
+	  	<%= label(:event, :category, 'Category:', :class => "label") %>
+	  	<%= event.select :category, options = [ 'Talk', 'Workshop',
+	  									 'Opening', 'Closing', 
+	  									 'Exhibition', 'Opportunity', 
+	  									 'Educational', 'General'] %></p>
+	  <p class="subform">
+	  	<%= label(:event, :title, 'Title:', :class => "label") %>
+	  	<%= event.text_field :title, :class => "field" %></p>
+	  <p class="subform">
+	  	<%= event.hidden_field :title, :value => "subtitle" %></p>
+	  <p class="subform">
+	  	<%= event.label(:artist, 'Artist(s):', :class => "label") %>
+	  	<%= event.text_field :artist, :class => "field", 
+									  :include_blank =>     true %></p>
+	  <p class="subform">
+	  	<%= event.label(:location, 'Location:', :class => "label") %>
+	  	<%= event.text_field :location, :class => "field" %></p>
+	  <p class="subform">
+	  	<%= event.label(:link, 'Link:', :class => "label") %>
+	  	<%= event.text_field :link, :class => "field" %></p>
+	  <p class="subform">
+	  	<%= event.hidden_field :permalink, :value => "permalink" %></p>
+   </div>
+
+	<!-- event start dates and times -->
+	<div id="section">
+		<p class="subform">
+			<%= event.label(:opendate, 'Open:', :class => "label") %>
+			<%= event.date_select :opendate %></p>
+		<p class="subform">
+			<%= event.label(:starttime, 'Time:', :class => "label") %>
+			<%= event.time_select :starttime, :minute_step => 15, 			
+												:include_blank => true %></p>
+		<p class="subform">
+			<%= event.label(:closedate, 'Close:', :class => "label") %>
+			<%= event.date_select :closedate, :include_blank => true %></p>
+	</div>
+	
+	<!-- image upload -->
+	<div id="section">
+		<p class="subform">
+		<%= label :event, :image %>
+		<%= file_field_tag :image_file %></p>
+	</div>
+	
+	<!-- event end dates and time -->
+	<div id="section">
+		<p class="subform">
+		<%= event.text_area :copy %></p>
+	</div>
 
 	<div id="section">
-		<div id="submit"><%= submit_tag "Submit" %></div>
+		<div id="submit">
+		<%= submit_tag "Submit" %></div>
 	</div>
 	<% end %>
+	
+	

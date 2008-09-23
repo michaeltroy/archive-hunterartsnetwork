@@ -2,15 +2,10 @@ class Event < ActiveRecord::Base
   
     ## Relationships
     belongs_to :member
+    has_one :image, :dependent => :destroy
     
     validates_presence_of :category, :title, :location, :copy
     validates_uniqueness_of :title
-    
-    # Event listing
- # def self.today
-  #  today = Event.find(:all, :order => :starttime, 
-   # :conditions => ["closedate = ? or opendate = ?", Date.today, Date.today])
-#  end
   
   def self.starts_today
     starts_today = Event.find(:all, :order => :starttime, 

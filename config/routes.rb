@@ -1,9 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
+  
+  map.resources :events, :controller => "member/event"
 
   
-  map.connect "Directory", :controller => "pages", :action => "member_directory"
+  map.connect "Directory", :controller => "pages", 
+                           :action => "member_directory"
   map.connect "Events", :controller => "pages", :action => "events"
   map.connect "Articles", :controller => "pages", :action => "articles"
   

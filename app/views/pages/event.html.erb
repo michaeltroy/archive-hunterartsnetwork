@@ -21,8 +21,8 @@
 	
 	<% if @event.link? %>
 	<p class="link">
-	<%= link_to "http://www.#{@event.link}", 
-				"http://www.#{@event.link}", :target => 'blank' %></p>
+	<%= link_to "#{@event.link}", 
+				"#{@event.link}", :target => 'blank' %></p>
 	<% end %>
 
 </div>

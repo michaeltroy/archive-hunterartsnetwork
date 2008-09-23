@@ -35,7 +35,7 @@
 			<%= date_select :event, :opendate %></p>
 		<p class="subform">
 			<%= label(:event, :starttime, 'Time:', :class => "label") %>
-			<%= time_select :event, :starttime, :minute_step => 15 %></p>
+			<%= time_select :event, :starttime, :minute_step => 15, :include_blank => true %></p>
 		<p class="subform">
 			<%= label(:event, :closedate, 'Close:', :class => "label") %>
 			<%= date_select :event, :closedate, :include_blank => true %></p>
@@ -46,5 +46,8 @@
 		<p class="subform">
 			<%= text_area :event, :copy %></p>
 	</div>
+	
+	
+
 	
 	
