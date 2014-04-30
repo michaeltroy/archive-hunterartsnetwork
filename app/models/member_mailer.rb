@@ -2,7 +2,7 @@ class MemberMailer < ActionMailer::Base
   
   def new_member(member)
     email_base(member)
-    @subject      += "Your profile page is ready!"
+    @subject      += "Your account is ready!"
   end
   
   def send_forgotten_password(member)

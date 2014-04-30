@@ -44,11 +44,6 @@ ActiveRecord::Schema.define(:version => 16) do
     t.datetime "updated_at"
   end
 
-  create_table "event_mailers", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "events", :force => true do |t|
     t.string   "category"
     t.string   "title"
@@ -103,11 +98,11 @@ ActiveRecord::Schema.define(:version => 16) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.integer  "member_id"
     t.string   "session_id", :default => "", :null => false
     t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "member_id"
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"

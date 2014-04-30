@@ -18,7 +18,6 @@ class Admin::DashboardController < Admin::SessionsController
   
   def index
     @members = Member.find(:all, :limit => 5, :order => 'created_at DESC')
-    @artworks = Artwork.find(:all)
     @articles = Article.find(:all, :limit => 5, :order => 'created_at DESC')
     @events = Event.find(:all, :order => :opendate, 
                                :limit => 5, :order => 'created_at DESC')

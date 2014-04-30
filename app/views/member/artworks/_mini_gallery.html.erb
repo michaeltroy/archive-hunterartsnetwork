@@ -1,5 +1,5 @@
 
-	<% for art in @profile.artworks do %>	
+	<% @profile.artworks.each do |art| %>	
 	<div id="artworkThumb">
 		<% unless art.public_filename() %>
 		plop

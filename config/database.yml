@@ -1,6 +1,6 @@
 development:
   adapter: mysql
-  database: HunterArts_development
+  database: development
   username: root
   password:
   socket: /tmp/mysql.sock
@@ -10,14 +10,14 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql
-  database: HunterArts_test
+  database: test
   username: root
   password:
   socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
-  database: hunterArts_production
+  database: production
   username: root
   password: monsterz
   socket: /var/run/mysqld/mysqld.sock
